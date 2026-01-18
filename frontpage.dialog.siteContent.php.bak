@@ -1,0 +1,83 @@
+<meta name="description" content="Take a video or (tiled) background of any resolution, and project information onto that using any weblanguage you want. Written in a style simple enough for children to learn from.">
+<?php
+    require_once(dirname(__FILE__).'/../NicerAppWebOS/boot.php');
+    global $naWebOS;
+    global $naURLs;
+    //$src = $naWebOS->basePath.'/../../domains/'.$naWebOS->domainFolder.'/domainConfig/pageHeader.php'; echo $src; var_dump(file_exists($src)); exit();
+    require_once ($naWebOS->basePath.'/../domains/'.$naWebOS->domainFolder.'/domainConfig/pageHeader.php');
+?>
+    <script type="text/javascript">
+        //delete na.site.settings.current.app;
+        //na.m.waitForCondition ('frontPage.dialog.siteContent.php : desktopIdle?', na.m.desktopIdle, function() {
+            //na.d.s.visibleDivs.push('#siteToolbarLeft');
+            //na.d.s.visibleDivs.push('#siteToolbarRight');
+            //na.d.s.visibleDivs.push('#siteToolbarTop');
+            //na.desktop.resize();
+       // }, 100);
+        $(document).ready(function() {
+            na.d.s.visibleDivs = arrayRemove (na.d.s.visibleDivs, '#siteToolbarLeft');
+            na.d.s.visibleDivs = arrayRemove (na.d.s.visibleDivs, '#siteToolbarRight');
+            na.d.s.visibleDivs = arrayRemove (na.d.s.visibleDivs, '#siteToolbarThemeEditor');
+            na.d.s.visibleDivs = arrayRemove (na.d.s.visibleDivs, '#siteToolbarTop');
+        });
+    </script>
+
+    <div style="max-width:1000px;margin:8px;padding:8px;border-radius:5px;background:rgba(250, 233, 52,0.35);background:rgba(0,0,250,0.47);box-shadow:0px 0px 8px 4px rgba(0,0,0,0.631), 2px 2px 2px rgba(0,0,0,0.7);line-height:1.5em;">
+        <p style="padding:8px;border-radius:5px;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;">
+        Take a video or (tiled) background of any resolution, and <a href="https://youtube.com/@Rene-AJM-Veerman" class="nomod noPushState" target="fiveDotEightVids">project information</a> onto that using any weblanguage you want.<br/>
+        Written in a style simple enough for people of all age groups to learn from, play with, and extend.<br/>
+        Best viewed in Chrome, Chromium based browsers, FireFox, Edge or Safari.
+        </p>
+        <p style="padding:8px;border-radius:5px;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;">
+        Opensourced <a href="https://github.com/Rene-AJM-Veerman/NicerApp-WebOS-5.10.z" class="nomod noPushState" target="naGithub">on Github.com</a>, and available as <a href="https://nicer.app/downloads" class="nomod noPushState" target="naDownload">full package here</a>.
+        </p>
+    </div>
+
+
+    <h1 class="contentSectionTitle1">Free apps offered :</h1>
+
+
+<?php
+    global $naLAN;
+    if ($naLAN) {
+?>
+<!-- don't wanna confuse myself
+    <h3 class="contentSectionTitle3"><a href="/me" class="contentSectionTitle3_a nomod noPushState" target="_new">Blogging</a></h3>
+    <div class="backdropped">The blogging interface will soon house the social media features as well.</div>
+
+    <h3 class="contentSectionTitle3"><a href="<?php echo $naURLs['music'];?>" class="contentSectionTitle3_a">Music</a></h3>
+    <div class="backdropped">The music pages are viewable, downloadable, and hearable, but only in their most basic form.<br/>Awaiting the big transfer to a 3D environment next. :-)</div>
+-->
+<?php } ?>
+
+    <h2 id="h3_news" class="contentSectionTitle2">News</h2>
+    <ul class="index" style="margin-block-end:33px;">
+        <li><a href="<?php echo $naURLs['newsHeadlines_englishNews'];?>" class="contentSectionTitle3_a">English News</a></li>
+        <li><a href="<?php echo $naURLs['newsHeadlines_englishNews_worldHeadlines'];?>" class="contentSectionTitle3_a">English News : World Headlines only</a></li>
+        <li><a href="/business-news" class="contentSectionTitle3_a">English Business News</a></li>
+        <li><a href="<?php echo $naURLs['newsHeadlines_nederlandsNieuws'];?>" class="contentSectionTitle3_a">Nederlands Nieuws</a></li>
+        <li><a href="<?php echo $naURLs['newsHeadlines_nederlandsNieuws_wereldNieuws'];?>" class="contentSectionTitle3_a">Nederlands Nieuws : Internationale Headlines</a></li>
+        <li><a href="<?php echo $naURLs['newsHeadlines_deutscheNachrichten'];?>" class="contentSectionTitle3_a">Deutsche Nachrichten</a></li>
+        <li><a href="<?php echo $naURLs['newsHeadlines_arabic'];?>" class="contentSectionTitle3_a">Arabic Business News (in English)</a></li>
+    </ul>
+    
+    <h3 class="contentSectionTitle3"><a href="<?php echo $naURLs['tarot'];?>" class="contentSectionTitle3_a">Tarot cardgame</a></h3>
+
+    <!--<h3 class="contentSectionTitle3"><a href="https://zoned.at" target="zonedAt" class="contentSectionTitle3_a">URL redirection (on https://zoned.at)</a></h3>-->
+
+    <h3 class="contentSectionTitle3"><a href="/wiki/frontpage" class="contentSectionTitle3_a">Wikipedia.org view</a></h3>
+
+    <h2 class="contentSectionTitle2">Demos</h2>
+    <!--<h3 class="contentSectionTitle3"><a href="<?php echo $naURLs['3Dcube'];?>" class="contentSectionTitle3_a">3D demo : cube</a></h3>
+    <h3 class="contentSectionTitle3"><a href="<?php echo $naURLs['3Dmodels'];?>" class="contentSectionTitle3_a">3D demo : loading of models (slow to start up)</a></h3>-->
+    <h3 class="contentSectionTitle3"><a href="<?php echo $naURLs['backgroundsBrowser'];?>" class="contentSectionTitle3_a">3D file explorer</a></h3>
+<?php
+    global $naLAN;
+    if ($naLAN) {
+?>
+
+    <h2 class="contentSectionTitle2">Administrative features</h2>
+    <h3 class="contentSectionTitle3"><a href="/filePhoenix" class="contentSectionTitle3_a">NicerEnterprises FilePhoenix</a></h3>
+    <h3 class="contentSectionTitle3"><a href="<?php echo $naURLs['analytics'];?>" class="contentSectionTitle3_a">Analytics</a></h3>
+    <h3 class="contentSectionTitle3"><a href="/view/logs" class="contentSectionTitle3_a">Logs</a></h3>
+<?php } ?>
