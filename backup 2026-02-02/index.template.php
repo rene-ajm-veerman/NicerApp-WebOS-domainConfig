@@ -15,6 +15,7 @@ global $naWebOS;
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="/NicerAppWebOS/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <meta name="description" content="Discover an open-source CMS and WebOS that lets you create stunning apps over dynamic backgrounds. Perfect for all ages to learn, play, and innovate!">
     <title>{$title}</title>
     <!-- see fonts.google.com (thanks, Google!) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -109,24 +110,21 @@ Chart.register(
         <img class="bg_last" alt=""/>
     </div>
 
-    <div id="siteStatusbar" class="vividDialog naStatusbar">Initializing core HTML, CSS and Javascripts..</div>
-
     <div id="siteTaskbar" class="vividDialog naTaskbar naNoSettings" style="max-height:80px;">
       <div class="vividDialogBackground1"></div>
-      <no-video-yet-here class="naBorder"
-        autoplay
-        loop
+      <video class="naBorder_dont"
+        hidden
         muted
         playsinline
         webkit-playsinline
         type="video/webm"
         >
+        <!-- omitted attributes : autoplay, loop -->
         <source src="https://said.by/siteMedia/videos/output1.webm" type="video/webm"></source>
       </video>
       <canvas class="naBorder"></canvas>
-      <no-video-yet-here class="naBackground"
-        autoplay
-        loop
+      <video class="naBackground_dont"
+        hidden
         muted
         playsinline
         webkit-playsinline
@@ -154,7 +152,7 @@ Chart.register(
 
 
         echo $naWebOS->html_vividButton (
-            4, 'margin:5px;position:relative;float:left;',
+            4, 'margin:0;position:relative;float:left;',
 
             'btnShowStartMenu', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
             '',
@@ -176,13 +174,13 @@ Chart.register(
             null
         );
         echo $naWebOS->html_vividButton (
-            5, 'margin:5px;position:relative;float:left;',
+            5, 'margin:0;position:relative;float:left;',
 
             'btnSettings', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
             '',
-            'if (!$(this).is(\'.disabled\')) { $(\'#siteLogin\').fadeOut(\'fast\').delay(20).animate({top:-750}); }',
-            'na.site.settings.heldUp[\'#siteSettingsMenu\'] = true; $(\'#siteSettingsMenu\').removeClass(\'hidden\').addClass(\'shown\')',
-            '$(\'#siteSettingsMenu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#siteSettingsMenu\'});',
+            'if (!$(this).is(\'.disabled\')) { $(\'#siteLogin\').fadeOut(\'fast\').delay(20).animate({top:-750}); }; na.site.settings.heldUp[\'#siteSettingsMenu\'] = true; $(\'#siteSettingsMenu\').removeClass(\'hidden\').addClass(\'shown\')',
+            '',
+            '',//'$(\'#siteSettingsMenu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#siteSettingsMenu\'});',
 
             7, null,
 
@@ -249,9 +247,9 @@ Chart.register(
 
             'btnSiteOptions', 'vividButton_icon_50x50 grouped', '_50x50', 'grouped',
             '',
-            'if (!$(this).is(\'.disabled\')) { $(\'#siteLogin\').fadeOut(\'fast\').animate({top:-750}); }',
-            'na.site.settings.heldUp[\'#btnOptions_menu\'] = true; if (!$(this).is(\'.disabled\')) { var me = $(\'#btnSiteOptions\'); o = me.offset(); $(\'#btnOptions_menu\').fadeIn(\'fast\').animate({bottom:$(window).height()-o.top-me.height()+25,left:o.left+me.width()+25,zIndex:2100}); }',
-            'if (!$(this).is(\'.disabled\')) { var me = $(\'#btnSiteOptions\'); o = me.offset(); /*$(\'#btnOptions_menu\').fadeOut(\'fast\').animate({top:-750 };*/ debugger; $(\'#btnOptions_menu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#btnOptions_menu\'});',
+            '$(\'#btnSiteOptions_menu\').css({bottom : $(window).height()  - $(\'#btnSiteOptions\').offset().top, left : $(\'#btnSiteOptions\').offset().left}).fadeIn(\'normal\'); if (!$(this).is(\'.disabled\')) { $(\'#siteLogin\').fadeOut(\'fast\').animate({top:-750}); }',
+            '',//'na.site.settings.heldUp[\'#btnOptions_menu\'] = true; if (!$(this).is(\'.disabled\')) { var me = $(\'#btnSiteOptions\'); o = me.offset(); $(\'#btnOptions_menu\').fadeIn(\'fast\').animate({bottom:$(window).height()-o.top-me.height()-25,left:o.left+me.width()+25}); }',
+            '',//'if (!$(this).is(\'.disabled\')) { var me = $(\'#btnSiteOptions\'); o = me.offset(); /*$(\'#btnOptions_menu\').fadeOut(\'fast\').animate({top:-750 };*/ debugger; $(\'#btnOptions_menu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#btnOptions_menu\'});',
 
 
             7, 'Site Options',
@@ -272,7 +270,7 @@ Chart.register(
 
             'btnLogin', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
             '',
-            'if (!$(this).is(\'.disabled\')) { $(\'#siteLogin\').fadeIn(\'fast\').animate({top:$(window).height()/2-$(\'#siteLogin\').height()/2}); }',
+            'if (!$(this).is(\'.disabled\')) { $(\'#siteLogin\').fadeIn(\'fast\').animate({top:$(window).height()/2-$(\'#siteLogin\').height()/2}); }; $(\'#btnSiteOptions_menu\').fadeOut(\'normal\')',
             '',
             '',
 
@@ -292,6 +290,19 @@ Chart.register(
         ?>
     </div>
 
+
+    <div id="btnSiteOptions_menu" class="vividDialogPopup anchored vividScrollpane" style="overflow:visible;padding:0;margin:0;"
+        onmouseover="clearTimeout(na.site.settings.timeout_hide__btnSiteOptions_menu);"
+        onmouseout="na.site.settings.timeout_hide__btnSiteOptions_menu = setTimeout(function(){ $('#btnSiteOptions_menu').fadeOut('fast'); }, 250);">
+        <?php
+        //onmouseover="na.site.onmouseover_btnOptions(event);" onmouseout="na.site.onmouseout_btnOptions(event)"
+            global $naWebOS;
+            $fn = realpath(dirname(__FILE__)).'/btnSiteOptions_menu__default.php';
+            if (file_exists($fn)) echo require_return($fn);
+        ?>
+    </div>
+
+
     <div id="siteMenu" class="vividMenu vertical" controlledBy="na.desktop" tabindex="5" theme="{$theme}" avoid='{$siteMenu_avoid}'>
         <div id="siteMenu_vbChecker" class="vividButton vividButton_text vividMenu_item" theme="'+t.t+'" style="opacity:0.0001;position:absolute;">abc XYZ</div>
         <?php mainmenu_includeAllResolutionsAndSegments(); ?>
@@ -304,9 +315,6 @@ Chart.register(
             <form id="siteRegistrationForm" name="siteRegistrationForm" action="/register.php" method="POST">
                 <label for="srf_loginName">Name</label>
                 <input id="srf_loginName" name="srf_loginName" type="text"/><br/>
-
-                <label for="srf_surname">Name</label>
-                <input id="srf_surname" name="srf_surname" type="text"/><br/>
 
                 <!--<label for="srf_email" class="tooltip" tooltipTheme="mainTooltipTheme" title="We'll be sending you a confirmation link to this address">E-mail</label>
                 <input id="srf_email" name="srf_email" type="text" class="tooltip" tooltipTheme="mainTooltipTheme" title="We'll be sending you a confirmation link to this address"/><br/>-->
@@ -456,20 +464,6 @@ echo $naWebOS->html_vividButton (
     </div>
     <div id="siteLoginSuccessful" class="vividDialogPopup vividScrollpane">Login Successful! <img srcPreload="/NicerAppWebOS/3rd-party/tinymce-4/plugins/naEmoticons/img/happy.gif"/></div>
     <div id="siteLoginFailed" class="vividDialogPopup vividScrollpane">Login failed..</div>
-    <div id="siteComments" class="vividDialog vividScrollpane">Login failed..</div>
-
-
-
-    <div id="btnOptions_menu" class="vividDialogPopup anchored vividScrollpane" style="z-index:-10;overflow:visible;padding:0;margin:0;"
-        onmouseover="clearTimeout(na.site.settings.timeout_hide__btnOptions_menu);"
-        onmouseout="na.site.settings.timeout_hide__btnOptions_menu = setTimeout(function(){ $('#btnOptions_menu').fadeOut('fast'); }, 500);">
-        <?php
-        //onmouseover="na.site.onmouseover_btnOptions(event);" onmouseout="na.site.onmouseout_btnOptions(event)"
-            global $naWebOS;
-            $fn = realpath(dirname(__FILE__)).'/btnOptions_menu__default.php';
-            if (file_exists($fn)) echo require_return($fn);
-        ?>
-    </div>
 
 
 
@@ -490,14 +484,15 @@ echo $naWebOS->html_vividButton (
     <div id="siteToolbarThemeEditor" class="vdToolbar vividDialog" style="display:none">
     <div class="vividDialogBackground1"></div>
     <div class="vividDialogContent vividScrollpane" style="overflow:visible;overflow-y:auto;">
-
-        <div id="specificitySettings" class="themeEditorComponent_alwaysVisible" style="font-size:15px;flex-wrap:wrap;box-shadow:inset 0px 0px 4px 2px rgba(0,0,0,0.6);">
-                <?php
+    <!--
+        <div class="sds_dialogTitle">
+<?php
+global $naWebOS;
 echo $naWebOS->html_vividButton (
-    4, 'align-items:center;',
+    4, 'width:100%;margin:5px;align-items:center;',
 
     'btnViewResult',
-    'vividButton_icon_50x50 grouped btnDelete forum', '_50x50', 'grouped',
+    'vividButton_icon_50x50 grouped', '_50x50', 'grouped',
     '',
     'na.te.hide(event)',
     '',
@@ -512,11 +507,16 @@ echo $naWebOS->html_vividButton (
 
     '',
 
-    '',
+    'View result',
     'grouped btnHide themeEditor',
     ''
 );
-                ?>
+
+?>
+        </div>
+        <div class="flexBreak"></div>
+        -->
+        <div id="specificitySettings" class="themeEditorComponent_alwaysVisible" style="font-size:15px;flex-wrap:wrap;box-shadow:inset 0px 0px 4px 2px rgba(0,0,0,0.6);">
 <?php
 global $naLAN;
 if (false && $naLAN) {
@@ -566,6 +566,60 @@ if (false && $naLAN) {
                     <option id="theme_default" name="theme_default" value="default">default</option>
                 </select>-->
                 <!--<span class="siteToolbarThemeEditor__label__themes">Theme</span>-->
+                <?php
+echo $naWebOS->html_vividButton (
+    4, 'align-items:center;',
+
+    'btnViewResult',
+    'vividButton_icon_50x50 grouped btnDelete forum', '_50x50', 'grouped',
+    '',
+    'na.te.hide(event)',
+    '',
+    '',
+
+    400, 'View result.',
+
+    'btnCssVividButton_outerBorder.png',
+    'btnCssVividButton.grey2a.png',
+    null,//'btnCssVividButton_iconBackground.png',
+    'btnBack.png',
+
+    '',
+
+    '',
+    'grouped btnHide themeEditor',
+    ''
+);
+                ?>
+                <!--<img src="/siteMedia/btnPickColor.png" class="vividButton" style="width:40px;"/>-->
+                <div id="siteToolbarThemeEditor__themes_dropdown" class="na_themes_dropdown na_themes_dropdown__themes vividScrollpane" style="position:relative;height:auto;white-space:normal;"></div>
+
+<?php
+global $naWebOS;
+echo $naWebOS->html_vividButton (
+    4, 'order:2;margin-left:10px',
+
+    'btnSetPermissionsForTheme', 'vividButton_icon_50x50 grouped btnDelete forum', '_50x50', 'grouped',
+    '',
+    'if (!$(this).is(\'.disabled\')) na.te.setPermissionsForTheme(event)',
+    '',
+    '',
+
+    403, 'Create or delete theme, and set permissions for current theme.',
+
+    'btnCssVividButton_outerBorder.png',
+    'btnCssVividButton.png',
+    'btnCssVividButton.red1b.png',
+    '1660_blk_19329_zoom.upperBodyOnly.256x256.png',
+
+    '<img class="vividButton_icon_imgButtonIcon_50x50_sup1" srcPreload="/siteMedia/btnTrashcan2_white_lowres.png" style="position:absolute;left:calc(50px - 15px);width:15px;height:19px;z-index:2021;"/>'
+    .'<img class="vividButton_icon_imgButtonIcon_50x50_sup2" srcPreload="/siteMedia/documentAdd_lowres.png" style="position:absolute;left:-5px;width:20px;height:20px;z-index:2021;"/>',
+
+    null,
+    null,
+    null
+);
+?>
             </div>
             <div style="display:flex;align-items:center;">
                 <!--<label for="specificity" class="specificityLabel" style="order:1;vertical-align:middle;font-weight:bold">Specificity</label>
@@ -602,37 +656,6 @@ echo $naWebOS->html_vividButton (
 );
 ?>
             </div>
-                <!--<img src="/siteMedia/btnPickColor.png" class="vividButton" style="width:40px;"/>-->
-            <div style="display:flex;">
-                <div id="siteToolbarThemeEditor__themes_dropdown" class="na_themes_dropdown na_themes_dropdown__themes vividScrollpane" style="position:relative;height:auto;white-space:normal;"></div>
-
-<?php
-global $naWebOS;
-echo $naWebOS->html_vividButton (
-    4, 'order:2;margin-left:10px',
-
-    'btnSetPermissionsForTheme', 'vividButton_icon_50x50 grouped btnDelete forum', '_50x50', 'grouped',
-    '',
-    'if (!$(this).is(\'.disabled\')) na.te.setPermissionsForTheme(event)',
-    '',
-    '',
-
-    403, 'Create or delete theme, and set permissions for current theme.',
-
-    'btnCssVividButton_outerBorder.png',
-    'btnCssVividButton.png',
-    'btnCssVividButton.red1b.png',
-    '1660_blk_19329_zoom.upperBodyOnly.256x256.png',
-
-    '<img class="vividButton_icon_imgButtonIcon_50x50_sup1" srcPreload="/siteMedia/btnTrashcan2_white_lowres.png" style="position:absolute;left:calc(50px - 15px);width:15px;height:19px;z-index:2021;"/>'
-    .'<img class="vividButton_icon_imgButtonIcon_50x50_sup2" srcPreload="/siteMedia/documentAdd_lowres.png" style="position:absolute;left:-5px;width:20px;height:20px;z-index:2021;"/>',
-
-    null,
-    null,
-    null
-);
-?>
-</div>
             <!--
             <div style="position:relative;display:flex;align-items:center;margin-top:5px;height:60px;">
                 <img src="/siteMedia/btnSettings.png" style="width:44px;"/>

@@ -64,20 +64,6 @@ pre, p {
 }
 #siteTaskbar {
   overflow : visible;
-  bottom : calc(3em + 40px);
-  height : 80px;
-  left:20px;
-  width:calc(100% - 40px);
-}
-#siteStatusbar {
-    position:absolute;
-    bottom : 20px;
-    left:20px;
-    width:calc(100% - 40px);
-    height : 3em;
-    display : flex;
-    justify-items : center;
-    justify-content : center;
 }
 .vividDialog > canvas.naBorder {
     z-index : 7000;

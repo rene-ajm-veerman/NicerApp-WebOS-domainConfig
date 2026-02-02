@@ -37,11 +37,14 @@
         <table style="width:fit-content">
             <tr>
                 <td>
-                    <div class="divFor_neCompanyLogo">
+                    <div class="divFor_neCompanyLogo" style="width:400px;height:700px;background:none;border:none;box-shadow:none;">
+                        <!--
                         <video controls autoplay loop playsinline style="width:fit-content">
                             <source src="/NicerAppWebOS/businessLogos/text-to-video-AI/raw-oxpecker-v5.11/stitched.mp4" type="video/mp4"></source>
                             Your browser does not support video.
                         </video>
+                        -->
+                        <iframe src="https://nicer.app/NicerAppWebOS/businessLogos/models/angel_brass_version.html" defer style="width:400px;height:700px;background:none;border:none;"></iframe>
                     </div>
                 </td>
                 <td rowspan="2">
