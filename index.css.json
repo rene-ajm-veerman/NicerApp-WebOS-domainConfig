@@ -1,6 +1,7 @@
 [
     "{$webPath}/NicerAppWebOS/3rd-party/jQuery/tooltipster/dist/css/tooltipster.bundle.css",
     "{$webPath}/NicerAppWebOS/3rd-party/jQuery/spectrum-master/spectrum.css",
+    "{$webPath}/NicerAppWebOS/3rd-party/tinymce-4/themes/charcoal/content.na.css",
     "{$domainPath}/domainConfig/index.css",
     "{$domainPath}/domainConfig/index.dark.css",
     "{$domainPath}/domainConfig/index.textDecorations.dark.css",

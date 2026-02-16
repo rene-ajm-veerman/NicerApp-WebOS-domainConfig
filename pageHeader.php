@@ -37,19 +37,19 @@
         <table style="width:fit-content">
             <tr>
                 <td>
-                    <div class="divFor_neCompanyLogo" style="width:400px;height:700px;background:none;border:none;box-shadow:none;">
+                    <div class="divFor_neCompanyLogo" style="width:500px;height:700px;background:none;border:none;box-shadow:none;">
                         <!--
                         <video controls autoplay loop playsinline style="width:fit-content">
                             <source src="/NicerAppWebOS/businessLogos/text-to-video-AI/raw-oxpecker-v5.11/stitched.mp4" type="video/mp4"></source>
                             Your browser does not support video.
                         </video>
                         -->
-                        <iframe src="https://nicer.app/NicerAppWebOS/businessLogos/models/angel_brass_version.html" defer style="width:400px;height:700px;background:none;border:none;"></iframe>
+                        <iframe src="https://nicer.app/NicerAppWebOS/businessLogos/models/angel_brass_version.html" defer style="width:500px;height:700px;background:none;border:none;"></iframe>
                     </div>
                 </td>
                 <td rowspan="2">
                     <div>
-                        <div style="margin-left:30px;"><h1 class="contentSectionTitle1" title="Nicer.app WebOS">Nicer.app <br/>WebOS</h1></div>
+                        <div style="margin-left:30px;"><h1 class="contentSectionTitle1" alt="Nicer.app WebOS homepage">Nicer.app WebOS homepage</h1></div>
                     </div>
                 </td>
             </tr>

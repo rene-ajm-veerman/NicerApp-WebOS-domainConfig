@@ -15,6 +15,9 @@ global $naWebOS;
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="/NicerAppWebOS/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
+    <meta property="og:image" content="/NicerAppWebOS/screenshot_small.png">
+    <meta property="og:description" content="{$description}">
+    <meta name="description" content="{$description}">
     <title>{$title}</title>
     <!-- see fonts.google.com (thanks, Google!) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +32,8 @@ global $naWebOS;
     -->
 
 {$javascriptLinks}
+<script type="text/javascript" src="/NicerAppWebOS/3rd-party/tinymce-4.9.11/js/tinymce/tinymce.js"></script>
+<script type="text/javascript" src="/NicerAppWebOS/3rd-party/tinymce-4.9.11/js/tinymce/jquery.tinymce.min.js"></script>
 <!--<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.5.0/chart.js" integrity="sha512-y5GdcvG8/LoqZllcaDnZKY4hKSDowG4vWAytStZ1AZ8sxgWke7KtkMx3G9KQU0Ih3kIDfY/3EO1sSyKGRxqwJQ==" crossorigin="anonymous" referrerpolicy="no-referrer">            import { Colors } from 'chart.js';
 
             Chart.register(Colors);
@@ -63,11 +68,15 @@ Chart.register(
             na.site.initialize ({$desktopDefinition});
         };
     </script>
-
 </head>
 
 <body onload="setTimeout(siteOnLoad,20);">
-    <img style="z-index:-10;position:absolute;opacity:0.001;" src="https://said.by/NicerAppWebOS/documentation/screenshots-diary/2025%20A.D./Screenshot_20251101_124721-800x450.png"/>
+
+{$customerSpecificBodyContent}
+
+    <blockquote style="z-index:-10;position:absolute;opacity:0.001;">
+        <img src="/NicerAppWebOS/screenshot_small.png"/>
+    </blockquote>
     <div id="siteContent" class="vividDialog">
         <div class="vividDialogBackground1"></div>
         <div class="vividDialogContent vividScrollpane" style="display:inline-block;position:relative;">
@@ -75,28 +84,40 @@ Chart.register(
         </div>
     </div>
 
-    <div id="siteToolbarTop" class="vividDialog">
+    <div id="siteToolbarTop" class="vividDialog naNoComments">
         <div class="vividDialogBackground1"></div>
         <div class="vividDialogContent vividScrollpane">
             {$div_siteToolbarTop}
         </div>
     </div>
 
-    <div id="siteToolbarLeft" class="vividDialog">
+    <div id="siteToolbarLeft" class="vividDialog naNoComments">
         <div class="vividDialogBackground1"></div>
         <div class="vividDialogContent vividScrollpane">
             {$div_siteToolbarLeft}
         </div>
     </div>
 
-    <div id="siteToolbarRight" class="vividDialog">
+    <div id="siteToolbarRight" class="vividDialog naNoComments">
         <div class="vividDialogBackground1"></div>
         <div class="vividDialogContent vividScrollpane">
             {$div_siteToolbarRight}
         </div>
     </div>
 
+    <div id="siteComments" class="vividDialog naNoComments">
+        <div class="vividDialogBackground1"></div>
+        <div class="vividDialogContent vividScrollpane">
+            <?=$naWebOS->comments->getHTMLandCSS();?>
+        </div>
+    </div>
 
+    <div id="siteCommentsEditor" class="vividDialogPopup naNoComments">
+        <div class="vividDialogBackground1"></div>
+        <div class="vividDialogContent vividScrollpane">
+            <?=$naWebOS->comments->getEditor();?>
+        </div>
+    </div>
 
     <div class="lds-facebook"><!-- loading icon, thanks for allowing CC0 license usage : https://loading.io/css/ --><div></div><div></div><div></div></div>
 
@@ -109,9 +130,14 @@ Chart.register(
         <img class="bg_last" alt=""/>
     </div>
 
-    <div id="siteStatusbar" class="vividDialog naStatusbar">Initializing core HTML, CSS and Javascripts..</div>
+    <div id="siteStatusbar" class="vividDialog naStatusbar naNoComments naNoSettings">
+        <div class="vividDialogBackground1"></div>
+        <div class="vividDialogContent vividScrollpane">
+            <a href="https://nicer.app" target="_new" class="nomod noPusState">NicerApp WebOS</a>&nbsp;is now initializing it's core HTML, CSS and Javascripts..
+        </div>
+    </div>
 
-    <div id="siteTaskbar" class="vividDialog naTaskbar naNoSettings" style="max-height:80px;">
+    <div id="siteTaskbar" class="vividDialog naTaskbar naNoSettings naNoComments" style="max-height:80px;">
       <div class="vividDialogBackground1"></div>
       <no-video-yet-here class="naBorder"
         autoplay
@@ -154,7 +180,7 @@ Chart.register(
 
 
         echo $naWebOS->html_vividButton (
-            4, 'margin:5px;position:relative;float:left;',
+            4, 'margin:0;position:relative;float:left;',
 
             'btnShowStartMenu', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
             '',
@@ -176,13 +202,13 @@ Chart.register(
             null
         );
         echo $naWebOS->html_vividButton (
-            5, 'margin:5px;position:relative;float:left;',
+            5, 'margin:0;position:relative;float:left;',
 
             'btnSettings', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
             '',
-            'if (!$(this).is(\'.disabled\')) { $(\'#siteLogin\').fadeOut(\'fast\').delay(20).animate({top:-750}); }',
             'na.site.settings.heldUp[\'#siteSettingsMenu\'] = true; $(\'#siteSettingsMenu\').removeClass(\'hidden\').addClass(\'shown\')',
-            '$(\'#siteSettingsMenu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#siteSettingsMenu\'});',
+            '',//'$(\'#siteSettingsMenu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#siteSettingsMenu\'});',
+            '',
 
             7, null,
 
@@ -225,7 +251,7 @@ Chart.register(
         ?>
     </div>
 
-    <div id="siteSettingsMenu" class="vividDialog naStartMenu naNoSettings hidden">
+    <div id="siteSettingsMenu" class="vividDialog naStartMenu naNoSettings naNoComments hidden">
       <div class="vividDialogBackground1"></div>
         <?php
 
@@ -249,9 +275,9 @@ Chart.register(
 
             'btnSiteOptions', 'vividButton_icon_50x50 grouped', '_50x50', 'grouped',
             '',
-            'if (!$(this).is(\'.disabled\')) { $(\'#siteLogin\').fadeOut(\'fast\').animate({top:-750}); }',
-            'na.site.settings.heldUp[\'#btnOptions_menu\'] = true; if (!$(this).is(\'.disabled\')) { var me = $(\'#btnSiteOptions\'); o = me.offset(); $(\'#btnOptions_menu\').fadeIn(\'fast\').animate({bottom:$(window).height()-o.top-me.height()+25,left:o.left+me.width()+25,zIndex:2100}); }',
-            'if (!$(this).is(\'.disabled\')) { var me = $(\'#btnSiteOptions\'); o = me.offset(); /*$(\'#btnOptions_menu\').fadeOut(\'fast\').animate({top:-750 };*/ debugger; $(\'#btnOptions_menu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#btnOptions_menu\'});',
+            'if (!$(this).is(\'.disabled\')) { var btn = $(\'#btnSiteOptions\'), me = $(\'#btnOptions_menu\'), dp = $(me).css(\'display\'); if (dp==\'none\') me[0].vividUserInterface_2D_dialog.show({evt:event,btn:btn,checkHeldUp:me}); else me[0].vividUserInterface_2D_dialog.hide({evt:event,btn:btn,checkHeldUp:me}); };',
+            '',//'if (!$(this).is(\'.disabled\')) { $(\'#siteLogin\').fadeOut(\'fast\').animate({top:-750}); }',
+            '',//'na.site.settings.heldUp[\'#btnOptions_menu\'] = true; if (!$(this).is(\'.disabled\')) { var me = $(\'#btnSiteOptions\'); o = me.offset(); $(\'#btnOptions_menu\').fadeIn(\'fast\').animate({bottom:$(window).height()-o.top-me.height()+25,left:o.left+me.width()+25,zIndex:2100}); }',
 
 
             7, 'Site Options',
@@ -298,7 +324,7 @@ Chart.register(
         <ul class="vividMenu_mainUL" style="display:none;"></ul>
     </div>
 
-    <div id="siteRegistration" class="vividDialogPopup vividScrollpane">
+    <div id="siteRegistration" class="vividDialogPopup">
         <div id="siteRegistration_background" class="vividDialogPopup_background"></div>
         <div id="siteRegistrationContainer">
             <form id="siteRegistrationForm" name="siteRegistrationForm" action="/register.php" method="POST">
@@ -456,17 +482,16 @@ echo $naWebOS->html_vividButton (
     </div>
     <div id="siteLoginSuccessful" class="vividDialogPopup vividScrollpane">Login Successful! <img srcPreload="/NicerAppWebOS/3rd-party/tinymce-4/plugins/naEmoticons/img/happy.gif"/></div>
     <div id="siteLoginFailed" class="vividDialogPopup vividScrollpane">Login failed..</div>
-    <div id="siteComments" class="vividDialog vividScrollpane">Login failed..</div>
 
 
 
-    <div id="btnOptions_menu" class="vividDialogPopup anchored vividScrollpane" style="z-index:-10;overflow:visible;padding:0;margin:0;"
+    <div id="btnOptions_menu" class="vividDialogPopup anchored vividScrollpane" style="z-index:-10;overflow:visible;padding:0;margin:0;max-width:550px;font-size:small;"
         onmouseover="clearTimeout(na.site.settings.timeout_hide__btnOptions_menu);"
         onmouseout="na.site.settings.timeout_hide__btnOptions_menu = setTimeout(function(){ $('#btnOptions_menu').fadeOut('fast'); }, 500);">
         <?php
         //onmouseover="na.site.onmouseover_btnOptions(event);" onmouseout="na.site.onmouseout_btnOptions(event)"
             global $naWebOS;
-            $fn = realpath(dirname(__FILE__)).'/btnOptions_menu__default.php';
+            $fn = realpath(dirname(__FILE__)).'/btnSiteOptions_menu__default.php';
             if (file_exists($fn)) echo require_return($fn);
         ?>
     </div>

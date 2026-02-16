@@ -2,6 +2,22 @@
   --mainDelay : 0.25s;
 }
 
+.naComment_header_div { display:grid;justify-items:center; grid-template-columns: repeat(2, 1fr);}
+.naComment_header_div div { align-self: center; }
+
+.naComment_header { display : flex; flex-direction : column; }
+.naComment_header span { align-self : center }
+
+.naComment_header {
+  margin : 15px;
+  padding : 10px;
+  background : rgba(0,255,255 ,0.5);
+  border-radius : 10px;
+  border : 1px solid grey;
+  box-shadow : 2px 2px 3px 2px rgba(0,0,0,0.7);
+  text-shadow : 2px 2px 3px rgba(0,0,0,0.85);
+}
+
 .backdropped {
   width : fit-content;
   margin : 15px;
@@ -118,9 +134,6 @@
   color : white;
   font-weight : bold;
   text-shadow : 0px 0px 3px yellow;
-    border : 1px solid ivory;
-    box-shadow : -1px -1px 3px 2px rgba(255,255,255,0.7), 1px 1px 4px 2px rgba(0,0,0,0.7);
-    border-radius : 16px;
     position : absolute;
 /*     min-width : 300px; */
     height : auto;
@@ -139,11 +152,6 @@
     font-weight : bold;
 }
 .vividDialogPopup input {
-    background-color : rgba(255,255,255,0.55) !important;
-    backdrop-filter: blur(8px);
-    opacity : 0.7;
-    margin : 10px;
-    padding : 10px;
     border-radius : 10px;
     color: navy;
     font-size : large;
@@ -155,17 +163,9 @@
 .vividDialogPopup::before {
     content : '';
     border-radius : 16px;
-    background : linear-gradient(180deg,
-        rgba(0,255,0,0.55) 0%,
-        rgba(0,0,200,0.55) 50%,
-        rgba(0,255,0,0.55) 100%
-
-    );
+    border : 1px solid ivory;
+    box-shadow: rgba(255, 255, 255, 0.4) -1px -1px 3px 1px, rgba(0, 0, 0, 0.55) 2px 2px 4px 2px;
     z-index : -1;
-    -webkit-mask-image: url("/siteMedia/vividDialog_borderMask_500x1000.png");
-    mask-image: url("/siteMedia/vividDialog_borderMask_500x1000.png");
-    -webkit-mask-size: 100% 100%, contain;
-    -webkit-mask-repeat : no-repeat;
     position:absolute;
     top : 0px;
     left : 0px;
@@ -213,9 +213,8 @@
   z-index : 1000;
 }
 
+#siteStatusbar .vividDialogContent { color : white; display : flex; align-items:center;justify-content:center;}
 #siteStatusbar {
-  background : rgba(0,0,0,0.555);
-  color : white;
   box-shadow : 0px 0px 3px 2px rgba(255,255,255,0.5), inset 0px 0px 7px 6px rgba(255,255,255,0.5);
   z-index : 500;
 }
@@ -293,6 +292,7 @@
 .datetime.date {
   font-size : small;
 }
+
 
 #siteSettingsMenu {
   -webkit-transition: all var(--mainDelay) linear;
@@ -1224,3 +1224,59 @@ label {
     opacity : 0.3;
   }
 }
+
+
+.vividMenu_mainUL .menu-item.has-submenu {
+  position: relative;           /* already should be, but enforce */
+  padding-right: 4px;           /* tiny extension toward the submenu direction */
+}
+
+.vividMenu_mainUL .menu-item.has-submenu > a {
+  display: block;               /* make sure <a> fills li horizontally */
+  height: 100%;                 /* critical: stretch vertically too */
+  padding: 8px 12px;            /* adjust your actual values */
+  box-sizing: border-box;
+}
+
+/* Make sure the submenu starts flush against parent edge */
+.submenu {
+  margin-left: 0 !important;    /* remove any accidental left margin */
+  margin-top: 0 !important;
+}
+
+.menu-item.has-submenu::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;                     /* assuming submenus open right */
+  width: 8px;                   /* bridge width – 6–12px usually enough */
+  height: 100%;
+  z-index: 1;                   /* above background but below text */
+  background: transparent;
+}
+
+.menu-item.has-submenu::after {
+  content: "";
+  position: absolute;
+  inset: 0 -8px 0 100%;         /* extends 8px to the right of the li */
+  background: transparent;
+  pointer-events: auto;         /* catches mouse events */
+  z-index: 2;
+}
+
+/* interesting stuff straight from the MDN website :
+.vividDialog .vividDialogBackground1 {
+  border-image-slice:
+13 13 13 13;
+border-image-width:
+13px 13px 13px 13px;
+border-image-outset:
+13px 13px 13px 13px;
+border-image-repeat:
+repeat repeat;
+border-image-source:
+url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-4.png");
+border-style:
+solid;
+}
+*/

@@ -1,1 +1,1 @@
-NicerApp WebOS homepage
+Nicer.App WebOS homepage

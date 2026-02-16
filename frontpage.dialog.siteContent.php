@@ -26,11 +26,15 @@
         Discover an open-source CMS and WebOS that lets you create stunning apps over dynamic backgrounds.<br/>
         Perfect for all ages to learn, play, and innovate!
         </p>
+        <p style="padding:8px;border-radius:5px;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;">Project status : <span id="siteLastModified"></span>.
+        </p>
         <p style="padding:8px;border-radius:5px;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;">
-        Opensourced as<br/><a href="https://github.com/rene-ajm-veerman/nicerApp-WebOS-5.10.z" class="nomod noPushState" target="naGithub">v5.10.1 on Github.com</a> (nearly fully stable), <br/>
-        <a href="https://github.com/rene-ajm-veerman/nicerApp-WebOS-5.11.z" class="nomod noPushState" target="naGithub11">v5.11.0 on Github.com</a> (experimental, delayed) <br/>
+        Opensourced as <a href="https://github.com/rene-ajm-veerman/nicerApp-WebOS-5.10.z" class="nomod noPushState" target="naGithub">5.10.z on Github.com</a> (nearly fully stable),
         and available as <a href="https://nicer.app/downloads" class="nomod noPushState" target="naDownload">full package here</a>, <br/>
         and a live copy of the latest -not always stable- <a href="https://new.nicer.app" class="nomod noPushState" target="newNA">development version here</a>.
+        </p>
+        <p style="padding:8px;border-radius:5px;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;">
+        Bug-reports may be sent to <a href="mailto:rene.veerman.netherlands@gmail.com">rene.veerman.netherlands@gmail.com</a>, or to <a class="nomod noPushState" target="ghi" href="https://github.com/rene-ajm-veerman/nicerApp-WebOS-5.10.z/issues">https://github.com/rene-ajm-veerman/nicerApp-WebOS-5.10.z/issues</a>.
         </p>
     </div>
 
@@ -65,6 +69,7 @@
         <li><a href="/business-news" class="contentSectionTitle3_a">English Business News</a></li>
         <li><a href="<?php echo $naURLs['newsHeadlines_nederlandsNieuws'];?>" class="contentSectionTitle3_a">Nederlands Nieuws</a></li>
         <li><a href="<?php echo $naURLs['newsHeadlines_nederlandsNieuws_wereldNieuws'];?>" class="contentSectionTitle3_a">Nederlands Nieuws : Internationale Headlines</a></li>
+        <li><a href="/actualit%C3%A9s-fran%C3%A7aises" class="contentSectionTitle3_a">Actualités françaises</a></li>
         <li><a href="<?php echo $naURLs['newsHeadlines_deutscheNachrichten'];?>" class="contentSectionTitle3_a">Deutsche Nachrichten</a></li>
         <li><a href="<?php echo $naURLs['newsHeadlines_arabic'];?>" class="contentSectionTitle3_a">Arabic Business News (in English)</a></li>
     </ul>

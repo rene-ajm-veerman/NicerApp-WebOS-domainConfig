@@ -25,7 +25,6 @@ na.defaultDesktopDefinitionCode = na.d3c = {
 
             qs.type = qs.qs[0];
             qs.fnc = qs.qs[1].match(/^(.*?)\(\'(.*?)\'\).*?$/);
-            debugger;
         };
     },
 
@@ -39,11 +38,14 @@ na.defaultDesktopDefinitionCode = na.d3c = {
             "#siteContent" : {
                 "mode" : 1,
                 "snapTo" : [
-                    {"element" : "body","edge" : "top" }
+                    { "element" : "body","edge" : "top" },
+                    { "element" : "body","edge" : "left" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" }
+                    { "element" : "#siteTaskbar", "edge" : "top" },
+                    { "element" : "#siteComments", "edge" : "left" },
+                    { "element" : "#siteToolbarRight", "edge" : "left" }
                 ]
 
             }
@@ -52,11 +54,15 @@ na.defaultDesktopDefinitionCode = na.d3c = {
             "#siteContent" : {
                 "mode" : 1,
                 "snapTo" : [
-                    {"element" : "#siteToolbarTop","edge" : "bottom" }
+                    { "element" : "#siteToolbarTop","edge" : "bottom" },
+                    { "element" : "body","edge" : "left" }
+
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" }
+                    { "element" : "#siteTaskbar", "edge" : "top" },
+                    { "element" : "#siteComments", "edge" : "left" },
+                    { "element" : "#siteToolbarRight", "edge" : "left" }
                 ]
 
             }
@@ -161,7 +167,9 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" }
+                    { "element" : "#siteTaskbar", "edge" : "top" },
+                    { "element" : "#siteComments", "edge" : "left" },
+                    { "element" : "#siteToolbarRight", "edge" : "left" }
                 ]
 
             }
@@ -176,7 +184,9 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" }
+                    { "element" : "#siteTaskbar", "edge" : "top" },
+                    { "element" : "#siteComments", "edge" : "left" },
+                    { "element" : "#siteToolbarRight", "edge" : "left" }
                 ]
 
             }
@@ -254,7 +264,9 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" }
+                    { "element" : "#siteTaskbar", "edge" : "top" },
+                    { "element" : "#siteComments", "edge" : "left" },
+                    { "element" : "#siteToolbarRight", "edge" : "left" }
                 ]
 
             }
@@ -268,7 +280,9 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" }
+                    { "element" : "#siteTaskbar", "edge" : "top" },
+                    { "element" : "#siteComments", "edge" : "left" },
+                    { "element" : "#siteToolbarRight", "edge" : "left" }
                 ]
 
             }
@@ -320,7 +334,9 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" }
+                    { "element" : "#siteTaskbar", "edge" : "top" },
+                    { "element" : "#siteComments", "edge" : "left" },
+                    { "element" : "#siteToolbarRight", "edge" : "left" }
                 ]
 
             }
@@ -334,7 +350,9 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" }
+                    { "element" : "#siteTaskbar", "edge" : "top" },
+                    { "element" : "#siteComments", "edge" : "left" },
+                    { "element" : "#siteToolbarRight", "edge" : "left" }
                 ]
 
             }

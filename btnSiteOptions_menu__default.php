@@ -220,7 +220,7 @@
 
 
 <p class="smallPadding" style="width:calc(100%-10px);margin:5px;padding:3px;text-align:center;">Fading speed of menus :</p>
-<input id="menusFadingSpeed" type="range" min="300" max="1000" value="400" class="sliderOpacityRange" style="left:10px;width:calc(100% - 30px);position:relative;" onchange="na.site.menusFadingSpeed_change(event);"/>
+<input id="menusFadingSpeed" type="range" min="300" max="1000" value="400" class="sliderOpacityRange" style="left:10px;width:calc(100% - 60px);position:relative;" onchange="na.site.menusFadingSpeed_change(event);"/>
 
 <div style="margin-left:10px;width:calc(100% - 20px)">
     <input id="menusUseRainbowPanels" type="checkbox" onchange="na.site.menusUseRainbowPanels_change(event)" CHECKED>
@@ -237,7 +237,7 @@
 
 
 <p class="smallPadding" style="width:calc(100%-10px);margin:5px;padding:3px;text-align:center;">Transparency value of text background :</p>
-<input id="textBackgroundOpacity" type="range" min="1" max="100" value="50" class="sliderOpacityRange" style="left:10px;width:calc(100% - 30px);position:relative;" onchange="na.te.textBackgroundOpacityChange(event);"/>
+<input id="textBackgroundOpacity" type="range" min="1" max="100" value="50" class="sliderOpacityRange" style="left:10px;width:calc(100% - 60px);position:relative;" onchange="na.te.textBackgroundOpacityChange(event);"/>
 <br/>
 
 

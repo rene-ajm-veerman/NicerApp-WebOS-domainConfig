@@ -54,7 +54,18 @@ pre, p {
 .linkContainer a {
     margin-right : 10px;
 }
-
+#siteCommentsEditor {
+  position : absolute;
+  top :calc(50% - 5px);
+  left:calc(50% - 5px);
+  width : 10px;
+  height : 10px;
+  z-index : -1;
+  display : flex;
+}
+#siteCommentsEditor .vdSettings, #siteCommentsEditor .vdTools {
+    opacity : 0.00001;
+}
 #siteBackground {
   position : absolute;
   width : 100%;
@@ -76,8 +87,23 @@ pre, p {
     width:calc(100% - 40px);
     height : 3em;
     display : flex;
-    justify-items : center;
+    align-items : center;
     justify-content : center;
+}
+#siteToolbarRight, #siteComments {
+    left : calc(100% + 100px);
+    width : 440px;
+    position:absolute;
+    top : 20px;
+    height : calc(100% - 200px);
+}
+#siteComments {
+    width : 450px;
+    padding : 10px;
+    padding-top : 40px;
+}
+#siteToolbarLeft, #siteToolbarThemeEditor {
+    width : 400px;
 }
 .vividDialog > canvas.naBorder {
     z-index : 7000;
@@ -112,7 +138,8 @@ pre, p {
 }
 
 .vividDialogPopup {
-    z-index : 2000100;
+    z-index : 1920000;
+    overflow : visible;
 }
 .naStartMenu {
     z-index : 900000;
@@ -176,7 +203,7 @@ pre, p {
 }
 .vividButton_icon_50x50_siteTop img {
     position: absolute;
-    top : 3px;
+    top : 5px;
     left : 3px;
     width : 44px;
     height : 44px;
@@ -259,9 +286,9 @@ pre, p {
     opacity : 0.4;
 }
 .vividButton_icon_imgButtonIcon_50x50 {
-    width : 42px;
-    top : 4px;
-    left : 4px;
+    width : 34px;
+    top : 8px;
+    left : 8px;
     position : absolute;
     z-index : 2020;
 }
