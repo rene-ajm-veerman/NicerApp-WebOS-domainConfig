@@ -5,6 +5,26 @@ body {
   font-family: Montserrat, 'Roboto Condensed', sans-serif;
 }
 
+html {
+    font-size: 100%;   /* usually = 16px, but respects user prefs */
+}
+body {
+    font-size: 1rem;   /* = 16px default, but scalable */
+}
+span.backdropped {
+    display : block;
+}
+
+p { font-size: 1rem; }
+h1 { font-size: 1.7rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.35rem; }
+h4 { font-size: 1.2rem; }
+:root {
+    --base-font: clamp(14px, 3.5vw, 16px);
+}
+body { font-size: var(--base-font); }
+
 @media (any-pointer: coarse) {
     body {
         font-size : x-large;
@@ -20,6 +40,57 @@ body {
     }
 }
 
+#siteBackgrounds_content {
+    overflow : hidden;
+    display : flex;
+}
+.siteBackgrounds_panel {
+    overflow : auto;
+    position : absolute;
+    display : flex;
+    flex-wrap : wrap;
+}
+.kw {
+    color : white;
+    padding : 10px;
+    padding-top : 5px;
+    padding-bottom : 5px;
+    margin : 10px;
+    line-height : 2.5rem;
+    background : rgba(0,0,0,0.555);
+    border-radius : 8px;
+    display : flex;
+    width : fit-content;
+    white-space : nowrap;
+}
+.kw:hover { color : skyblue; }
+.kwSel {
+    color : lime;
+    background : rgba(0,0,100,0.555);
+}
+#siteBackgrounds_leftPanel {
+    width : 30%;
+    height : 100%;
+}
+#siteBackgrounds_rightPanel {
+    left:31%;
+    width : 69%;
+    height : 100%;
+}
+#siteBackgrounds_rightPanel img {
+    width: 32%;
+    height: auto !important;          /* override any inherited 100% */
+    max-width: 100%;                  /* safety */
+    display: inline-block;            /* or block — prevents unwanted gaps */
+    vertical-align: top;              /* removes bottom gap if inline */
+    margin: 0.3em;
+    object-fit: contain;              /* keeps aspect ratio, no cropping */
+    /* object-fit: cover; */          /* ← only if you WANT cropping */
+}
+
+.vividMenu :is(dir, menu, ol, ul) ul, .vividMenu ul {
+  list-style-type : none;
+}
 
 pre, p {
     display : block;

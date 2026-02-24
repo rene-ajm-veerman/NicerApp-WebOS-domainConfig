@@ -42,15 +42,9 @@
     <h1 class="contentSectionTitle1">Free apps offered :</h1>
 
     <h3 class="contentSectionTitle3"><a href="https://said.by" class="contentSectionTitle3_a nomod noPushState" target="_new">Social Media features</a></h3>
-    <h3 class="contentSectionTitle3"><a href="/bb" class="contentSectionTitle3_a">View backgrounds</a></h3>
 
     <!--
-    <div class="backdropped">
-        <h2>Music</h2>
-        <p class="backdropped" style="padding:10px">The music pages are viewable, downloadable, and hearable, but currently still only in their most basic form.<br/>Additional features are being worked on, including search and playlists.<br/>These pages will soon be used to expose only uploaded content (with optional plaintext password).<br/>I am legally bound to make my own music collection available only for myself, much to my chagrin,<br/>but fighting the lawyers and politicians in this case is counter-productive.</p>
-        <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="/music?pw=alwaysXMASzzz&idxStart=1400" class="contentSectionTitle3_a">2D</a></h3>
-        <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="/3D" class="contentSectionTitle3_a">3D</a></h3>
-    </div>
+    <h3 class="contentSectionTitle3"><a href="/bb" class="contentSectionTitle3_a">View backgrounds</a></h3>
     -->
 
 <?php
