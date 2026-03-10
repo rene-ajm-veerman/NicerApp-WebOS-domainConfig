@@ -18,6 +18,7 @@ global $naWebOS;
     <meta property="og:image" content="/NicerAppWebOS/screenshot_small.png">
     <meta property="og:description" content="{$description}">
     <meta name="description" content="{$description}">
+    <meta name="viewport" content="width=device-width, initial-scale=0.3, maximum-scale=2.5, user-scalable=yes">
     <title>{$title}</title>
     <!-- see fonts.google.com (thanks, Google!) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -77,7 +78,7 @@ Chart.register(
     <blockquote style="z-index:-10;position:absolute;opacity:0.001;">
         <img src="/NicerAppWebOS/screenshot_small.png"/>
     </blockquote>
-    <div id="siteContent" class="vividDialog">
+    <div id="siteContent" class="vividDialog naHas_btnComments">
         <div class="vividDialogBackground1"></div>
         <div class="vividDialogContent vividScrollpane" style="display:inline-block;position:relative;">
             {$div_siteContent}
@@ -105,7 +106,7 @@ Chart.register(
         </div>
     </div>
 
-    <div id="siteComments" class="vividDialog naNoComments">
+    <div id="siteComments" class="vividDialog naNoComments naHas_btnCloseWindow">
         <div class="vividDialogBackground1"></div>
         <div class="vividDialogContent vividScrollpane">
             <?=$naWebOS->comments->getHTMLandCSS();?>
@@ -148,7 +149,7 @@ Chart.register(
         type="video/webm"
         >
         <source src="https://said.by/siteMedia/videos/output1.webm" type="video/webm"></source>
-      </video>
+      </no-video-yet-here>
       <canvas class="naBorder"></canvas>
       <no-video-yet-here class="naBackground"
         autoplay
@@ -159,7 +160,7 @@ Chart.register(
         type="video/webm"
         >
         <source src="https://said.by/siteMedia/videos/output3.webm" type="video/webm"></source>
-      </video>
+      </no-video-yet-here>
       <canvas class="naBackground"></canvas>
         <?php
 
@@ -188,7 +189,7 @@ Chart.register(
             '',//'$(\'#siteStartMenu\').removeClass(\'hidden\').addClass(\'shown\')',
             '',//'$(\'#siteStartMenu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#siteStartMenu\'});',
 
-            7, null,
+            4, null,
 
             null,//'btnCssVividButton_outerBorder.png',
             null,//'btnCssVividButton.png',
@@ -201,8 +202,53 @@ Chart.register(
             null,
             null
         );
-        echo $naWebOS->html_vividButton (
+        global $naLAN;
+        if ($naLAN) echo $naWebOS->html_vividButton (
             5, 'margin:0;position:relative;float:left;',
+
+            'btnNewRandomSiteBackground', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
+            '',
+            'na.backgrounds.next(\'#siteBackground\');',
+            '',//'$(\'#siteSettingsMenu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#siteSettingsMenu\'});',
+            '',
+
+            5, null,
+
+            null,//'btnCssVividButton_outerBorder.png',
+            null,//'btnCssVividButton.png',
+            null,//'btnCssVividButton..png',
+            'btnBackground.png',
+
+            '',
+
+            null,
+            null,
+            null
+        );
+        if ($naLAN) echo $naWebOS->html_vividButton (
+            6, 'margin:0;position:relative;float:left;',
+
+            'btnSiteBackground', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
+            '',
+            "if ($('#siteBackgrounds').css('display')==='none') { $('#btnSiteBackground')[0].vividUserInterface_2D_button.select(); na.backgrounds.showBrowser(); } else { $('#btnSiteBackground')[0].vividUserInterface_2D_button.deselect(); $('#siteBackgrounds').fadeOut('normal'); }",
+            '',//'$(\'#siteSettingsMenu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#siteSettingsMenu\'});',
+            '',
+
+            6, null,
+
+            null,//'btnCssVividButton_outerBorder.png',
+            null,//'btnCssVividButton.png',
+            null,//'btnCssVividButton..png',
+            'btnMedia.png',
+
+            '',
+
+            null,
+            null,
+            null
+        );
+        echo $naWebOS->html_vividButton (
+            7, 'margin:0;position:relative;float:left;',
 
             'btnSettings', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
             '',
@@ -374,8 +420,15 @@ Chart.register(
         </div>
     </div>
 
+    <div id="siteBackgrounds" class="vividDialogPopup naHas_btnCloseWindow">
+        <div id="siteBackgrounds_background" class="vividDialogPopup_background"></div>
+        <div id="siteBackgrounds_content" class="vividDialogContent">
+            <div id="siteBackgrounds_panelLeft" class="siteBackgrounds_panel"></div>
+            <div id="siteBackgrounds_panelRight" class="siteBackgrounds_panel"></div>
+        </div>
+    </div>
 
-    <div id="siteLogin" class="vividDialogPopup vividScrollpane" style="" onmouseenter="$(event.currentTarget).css({opacity:1});">
+    <div id="siteLogin" class="vividDialogPopup" style="" onmouseenter="$(event.currentTarget).css({opacity:1});">
         <div id="siteLogin_background" class="vividDialogPopup_background"></div>
         <?php
 global $naWebOS;
@@ -480,8 +533,8 @@ echo $naWebOS->html_vividButton (
             </div>
         </div>
     </div>
-    <div id="siteLoginSuccessful" class="vividDialogPopup vividScrollpane">Login Successful! <img srcPreload="/NicerAppWebOS/3rd-party/tinymce-4/plugins/naEmoticons/img/happy.gif"/></div>
-    <div id="siteLoginFailed" class="vividDialogPopup vividScrollpane">Login failed..</div>
+    <div id="siteLoginSuccessful" class="vividDialogPopup vividScrollpane" style="background:url(/siteMedia/backgrounds/Tiled/Blue/pexels-magda-ehlers-5312889-seamless.jpg);box-shadow:-2px -2px 4px 2px yellow, 2px 2px 4px 2px yellow, 3px 3px 5px 3px black;text-shadow:3px 3px 3px black; text-align:center;vertical-align:middle;overflow:hidden;top:calc(50% - 150px);left:calc(50% - 150px);border-radius:20px;width:400px;height:auto">Login Successful! <img srcPreload="/NicerAppWebOS/3rd-party/tinymce-4/plugins/naEmoticons/img/happy.gif"/></div>
+    <div id="siteLoginFailed" class="vividDialogPopup vividScrollpane" style="background:url(/siteMedia/backgrounds/Tiled/Blue/pexels-magda-ehlers-5312889-seamless.jpg);box-shadow:-2px -2px 4px 2px yellow, 2px 2px 4px 2px yellow, 3px 3px 5px 3px black;text-shadow:3px 3px 3px black; text-align:center;vertical-align:middle;overflow:hidden;top:calc(50% - 150px);left:calc(50% - 150px);border-radius:20px;width:400px;height:auto">Login failed..</div>
 
 
 

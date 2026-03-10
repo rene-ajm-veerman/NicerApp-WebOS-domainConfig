@@ -240,7 +240,7 @@
   opacity : 0.37;
   z-index : -1;
 }
-#btnSettings, #btnShowStartMenu {
+#btnSettings, #btnSiteBackground, #btnNewRandomSiteBackground, #btnShowStartMenu {
   position : relative;
   display : inline-block;
   margin-top : 15px;

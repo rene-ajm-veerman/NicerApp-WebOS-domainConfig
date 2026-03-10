@@ -86,26 +86,6 @@
                 }
             },
             "jsCodeParam:::conditionsFailed" : {}
-        }, {
-            "jsCodeParam:::conditions" : [
-                { "jsVar" : "na.d.s.visibleDivs", "jsVarIncludes" : "#siteComments" },
-                { "jsVar" : "na.d.s.visibleDivs", "jsVarExcludes" : "#siteTaskbar" }
-            ],
-            "jsCodeParam:::conditionsMet" : {
-                "#siteComments" : {
-                    "mode" : 1,
-                    "snapTo" : [
-                                {"element" : "body","edge" : "top" },
-                                {"element" : "body","edge" : "right" }
-                    ],
-                    "growTo" : "maxY",
-                    "growToLimits" : [
-                        { "element" : "#siteTaskbar", "edge" : "top" }
-                    ]
-
-                }
-            },
-            "jsCodeParam:::conditionsFailed" : {}
         },
         {
             "jsCodeFunction:::na.d3c.areDivsVisible('visible::#siteToolbarLeft,,invisible::#siteToolbarRight,#siteToolbarThemeEditor');" : "jsCodeParam_conditionsMet:::na.d3c.dv_tl",
