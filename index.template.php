@@ -79,42 +79,42 @@ Chart.register(
         <img src="/NicerAppWebOS/screenshot_small.png"/>
     </blockquote>
     <div id="siteContent" class="vividDialog naHas_btnComments">
-        <div class="vividDialogBackground1"></div>
+
         <div class="vividDialogContent vividScrollpane" style="display:inline-block;position:relative;">
             {$div_siteContent}
         </div>
     </div>
 
     <div id="siteToolbarTop" class="vividDialog naNoComments">
-        <div class="vividDialogBackground1"></div>
+
         <div class="vividDialogContent vividScrollpane">
             {$div_siteToolbarTop}
         </div>
     </div>
 
     <div id="siteToolbarLeft" class="vividDialog naNoComments">
-        <div class="vividDialogBackground1"></div>
+
         <div class="vividDialogContent vividScrollpane">
             {$div_siteToolbarLeft}
         </div>
     </div>
 
     <div id="siteToolbarRight" class="vividDialog naNoComments">
-        <div class="vividDialogBackground1"></div>
+
         <div class="vividDialogContent vividScrollpane">
             {$div_siteToolbarRight}
         </div>
     </div>
 
     <div id="siteComments" class="vividDialog naNoComments naHas_btnCloseWindow">
-        <div class="vividDialogBackground1"></div>
+
         <div class="vividDialogContent vividScrollpane">
             <?=$naWebOS->comments->getHTMLandCSS();?>
         </div>
     </div>
 
     <div id="siteCommentsEditor" class="vividDialogPopup naNoComments">
-        <div class="vividDialogBackground1"></div>
+
         <div class="vividDialogContent vividScrollpane">
             <?=$naWebOS->comments->getEditor();?>
         </div>
@@ -132,14 +132,14 @@ Chart.register(
     </div>
 
     <div id="siteStatusbar" class="vividDialog naStatusbar naNoComments naNoSettings">
-        <div class="vividDialogBackground1"></div>
+
         <div class="vividDialogContent vividScrollpane">
             <a href="https://nicer.app" target="_new" class="nomod noPusState">NicerApp WebOS</a>&nbsp;is now initializing it's core HTML, CSS and Javascripts..
         </div>
     </div>
 
     <div id="siteTaskbar" class="vividDialog naTaskbar naNoSettings naNoComments" style="max-height:80px;">
-      <div class="vividDialogBackground1"></div>
+
       <no-video-yet-here class="naBorder"
         autoplay
         loop
@@ -298,7 +298,7 @@ Chart.register(
     </div>
 
     <div id="siteSettingsMenu" class="vividDialog naStartMenu naNoSettings naNoComments hidden">
-      <div class="vividDialogBackground1"></div>
+
         <?php
 
         $desktopSettings = [
@@ -566,7 +566,7 @@ echo $naWebOS->html_vividButton (
     </div>
 
     <div id="siteToolbarThemeEditor" class="vdToolbar vividDialog" style="display:none">
-    <div class="vividDialogBackground1"></div>
+
     <div class="vividDialogContent vividScrollpane" style="overflow:visible;overflow-y:auto;">
 
         <div id="specificitySettings" class="themeEditorComponent_alwaysVisible" style="font-size:15px;flex-wrap:wrap;box-shadow:inset 0px 0px 4px 2px rgba(0,0,0,0.6);">

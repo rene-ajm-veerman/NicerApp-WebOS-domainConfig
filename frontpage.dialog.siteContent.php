@@ -36,22 +36,30 @@
         <p style="padding:8px;border-radius:5px;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;">
         Bug-reports may be sent to <a href="mailto:rene.veerman.netherlands@gmail.com">rene.veerman.netherlands@gmail.com</a>, or to <a class="nomod noPushState" target="ghi" href="https://github.com/rene-ajm-veerman/nicerApp-WebOS-5.10.z/issues">https://github.com/rene-ajm-veerman/nicerApp-WebOS-5.10.z/issues</a>.
         </p>
+        <p style="padding:8px;border-radius:5px;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;">
+        <a href="https://x.com/GavanPeacefan/status/2035972666054582497" class="nomod noPushState" target="naProject_dataPhoenix">Announcement : Requested permission</a> to start work on a <a href="https://grok.com/share/c2hhcmQtMw_db2daf9d-a33c-4581-99f6-0caf6ad64c06?rid=ac9f97b3-12d6-4b16-8ede-49e657b1156f" class="nomod noPushState" target="grok_discussion_naProject_dataPhoenix">new exciting set of software components named 'dataPhoenix'</a> (being worked on right now as 'uDB 2.0', 'universal database 2.0'), designed to greatly increase file security and speedy automatic file integrity recovery. Over a region's Wide Area Network.
+        </p>
+        <p style="padding:8px;border-radius:5px;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;">
+        At the moment, there are many bugs on this website,<br/> caused by weeks of slow tedious work on the internal core engine parts. <br/>This will continue to happen for at least the next 2 to 3 years. :-(<br/>
+        Mais c'est la vie d'une developer ;).<br/>I'm working each day to eliminate the app-level bugs introduced by these changes.
+        </p>
     </div>
 
 
     <h1 class="contentSectionTitle1">Free apps offered :</h1>
 
     <h3 class="contentSectionTitle3"><a href="https://said.by" class="contentSectionTitle3_a nomod noPushState" target="_new">Social Media features</a></h3>
-    <h3 class="contentSectionTitle3"><a href="/bb" class="contentSectionTitle3_a">View backgrounds</a></h3>
 
-    <!--
     <div class="backdropped">
         <h2>Music</h2>
         <p class="backdropped" style="padding:10px">The music pages are viewable, downloadable, and hearable, but currently still only in their most basic form.<br/>Additional features are being worked on, including search and playlists.<br/>These pages will soon be used to expose only uploaded content (with optional plaintext password).<br/>I am legally bound to make my own music collection available only for myself, much to my chagrin,<br/>but fighting the lawyers and politicians in this case is counter-productive.</p>
-        <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="/music?pw=alwaysXMASzzz&idxStart=1400" class="contentSectionTitle3_a">2D</a></h3>
-        <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="/3D" class="contentSectionTitle3_a">3D</a></h3>
+        <p class="backdropped" style="padding:10px">I have dire public health reasons for hosting these files, but due to political sensitivities can no longer keep revealing these reasons publicly.<br/>
+        So I'll just wait for the takedown messages to arrive by email to rene.veerman.netherlands@gmail.com</p>
+
+        <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="/view/eyJcL05pY2VyQXBwV2ViT1NcL2FwcHNcL05pY2VyQXBwV2ViT1NcL2FwcGxpY2F0aW9uc1wvMkRcL211c2ljUGxheWVyLmZhbmN5LmxhdGVzdC4yRCI6eyJzZXQiOiJESiBGaXJlc25ha2UiLCJzZW9WYWx1ZSI6Im11c2ljLURKLXQxLUZpcmVzbmFrZSIsIndlYlJlbFBhdGgiOiJcL1wvXC9ESiBtaXhlc1wvREogRmlyZXNuYWtlXC9yZWxlYXNlZFwvIn19?idxStart=1400&pw=alwaysXMASzzz" class="contentSectionTitle3_a">2D-Fancy-UI : DJ FireSnake (aka Rene AJM Veerman or x.com @GavanPeacefan)</a></h3>
+        <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="/music-2D-beatPulse?pw=alwaysXMASzzz&idxStart=1400" class="contentSectionTitle3_a">2D : index</a> (under repair)</h3>
+        <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="/3D" class="contentSectionTitle3_a">3D</a> (under construction)</h3>
     </div>
-    -->
 
 <?php
     global $naLAN;

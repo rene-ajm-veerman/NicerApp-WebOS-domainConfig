@@ -399,7 +399,8 @@ na.defaultDesktopDefinitionCode = na.d3c = {
             "#siteContent" : {
                 "mode" : 1,
                 "snapTo" : [
-                    {"element" : "body","edge" : "top" }
+                    {"element" : "body","edge" : "top" },
+                    {"element" : "body","edge" : "left" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
@@ -413,7 +414,8 @@ na.defaultDesktopDefinitionCode = na.d3c = {
             "#siteContent" : {
                 "mode" : 1,
                 "snapTo" : [
-                    {"element" : "#siteToolbarTop","edge" : "bottom" }
+                    {"element" : "#siteToolbarTop","edge" : "bottom" },
+                    {"element" : "body","edge" : "left" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
@@ -466,6 +468,7 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 "mode" : 1,
                 "snapTo" : [
                     {"element" : "body","edge" : "top" },
+                    {"element" : "body","edge" : "left" },
                     {"element" : "#siteToolbarThemeEditor","edge" : "right" }
                 ],
                 "growTo" : "max",
@@ -479,6 +482,7 @@ na.defaultDesktopDefinitionCode = na.d3c = {
             "#siteContent" : {
                 "mode" : 1,
                 "snapTo" : [
+                    {"element" : "body","edge" : "left" },
                     {"element" : "#siteToolbarTop","edge" : "bottom" },
                     {"element" : "#siteToolbarThemeEditor","edge" : "right" }
                 ],

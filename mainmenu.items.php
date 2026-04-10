@@ -333,12 +333,28 @@
             'apps-current' => [
                 'NicerApp-WebOS__pageSettings' => [
                     "misc" => [
+                        'folder' => '/NicerAppWebOS/apps/NicerAppWebOS/applications/2D'
+                    ],
+                    "apps" => [
+                        'musicPlayer.beatPulse' => [
+                            'set' => 'index',
+                            'seoValue' => [ 'music-2D-beatPulse', 'music' ]
+                        ]
+                    ]
+                ]
+            ]
+        ],
+
+        "music.fancy" => [
+            'apps-current' => [
+                'NicerApp-WebOS__pageSettings' => [
+                    "misc" => [
                        'folder' => '/NicerAppWebOS/apps/NicerAppWebOS/applications/2D'
                     ],
                     "apps" => [
-                        'musicPlayer.javascriptRendering' => [
+                        'musicPlayer.fancy.latest.2D' => [
                             'set' => 'index',
-                            'seoValue' => 'music'
+                            'seoValue' => [ 'music-2D-fancy', 'music-fancy' ]
                         ]
                      ]
                 ]
