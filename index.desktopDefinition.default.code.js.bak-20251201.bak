@@ -25,6 +25,7 @@ na.defaultDesktopDefinitionCode = na.d3c = {
 
             qs.type = qs.qs[0];
             qs.fnc = qs.qs[1].match(/^(.*?)\(\'(.*?)\'\).*?$/);
+            debugger;
         };
     },
 
@@ -38,14 +39,11 @@ na.defaultDesktopDefinitionCode = na.d3c = {
             "#siteContent" : {
                 "mode" : 1,
                 "snapTo" : [
-                    { "element" : "body","edge" : "top" },
-                    { "element" : "body","edge" : "left" }
+                    {"element" : "body","edge" : "top" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" },
-                    { "element" : "#siteComments", "edge" : "left" },
-                    { "element" : "#siteToolbarRight", "edge" : "left" }
+                    { "element" : "#siteTaskbar", "edge" : "top" }
                 ]
 
             }
@@ -54,15 +52,11 @@ na.defaultDesktopDefinitionCode = na.d3c = {
             "#siteContent" : {
                 "mode" : 1,
                 "snapTo" : [
-                    { "element" : "#siteToolbarTop","edge" : "bottom" },
-                    { "element" : "body","edge" : "left" }
-
+                    {"element" : "#siteToolbarTop","edge" : "bottom" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" },
-                    { "element" : "#siteComments", "edge" : "left" },
-                    { "element" : "#siteToolbarRight", "edge" : "left" }
+                    { "element" : "#siteTaskbar", "edge" : "top" }
                 ]
 
             }
@@ -162,18 +156,12 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 "mode" : 1,
                 "snapTo" : [
                     {"element" : "body","edge" : "top" },
-                    (
-                        na.d.s.visibleDivs.includes('#siteToolbarLeft')
-                        ? {"element" : "#siteToolbarLeft","edge" : "right" }
-                        : {"element" : "#siteToolbarThemeEditor","edge" : "right" }
-                     ),
+                    {"element" : "#siteToolbarThemeEditor","edge" : "right" },
                     {"element" : "#siteToolbarRight","edge" : "left" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" },
-                    { "element" : "#siteComments", "edge" : "left" },
-                    { "element" : "#siteToolbarRight", "edge" : "left" }
+                    { "element" : "#siteTaskbar", "edge" : "top" }
                 ]
 
             }
@@ -183,35 +171,22 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 "mode" : 1,
                 "snapTo" : [
                     {"element" : "#siteToolbarTop","edge" : "bottom" },
-                    (
-                        na.d.s.visibleDivs.includes('#siteToolbarLeft')
-                        ? {"element" : "#siteToolbarLeft","edge" : "right" }
-                        : {"element" : "#siteToolbarThemeEditor","edge" : "right" }
-                    ),
+                    {"element" : "#siteToolbarThemeEditor","edge" : "right" },
                     {"element" : "#siteToolbarRight","edge" : "left" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" },
-                    { "element" : "#siteComments", "edge" : "left" },
-                    { "element" : "#siteToolbarRight", "edge" : "left" }
+                    { "element" : "#siteTaskbar", "edge" : "top" }
                 ]
 
             }
         };
         var r = {};
 
-        if (na.d.s.visibleDivs.includes('#siteToolbarLeft'))
         if (na.d.s.visibleDivs.includes('#siteToolbarTop'))
-            r = $.extend(r, r_tl_2);
+            r = $.extend(r, r_tl_2, r_tte_2, r_tr_2, r_tc_2);
         else
-            r = $.extend(r, r_tl_1);
-
-        if (na.d.s.visibleDivs.includes('#siteToolbarThemeEditor'))
-            if (na.d.s.visibleDivs.includes('#siteToolbarTop'))
-            r = $.extend(r, r_tte_2, r_tr_2, r_tc_2);
-        else
-            r = $.extend(r, r_tte_1, r_tr_1, r_tc_1);
+            r = $.extend(r, r_tl_1, r_tte_1, r_tr_1, r_tc_1);
 
         return r;
     },
@@ -279,9 +254,7 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" },
-                    { "element" : "#siteComments", "edge" : "left" },
-                    { "element" : "#siteToolbarRight", "edge" : "left" }
+                    { "element" : "#siteTaskbar", "edge" : "top" }
                 ]
 
             }
@@ -295,9 +268,7 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" },
-                    { "element" : "#siteComments", "edge" : "left" },
-                    { "element" : "#siteToolbarRight", "edge" : "left" }
+                    { "element" : "#siteTaskbar", "edge" : "top" }
                 ]
 
             }
@@ -349,9 +320,7 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" },
-                    { "element" : "#siteComments", "edge" : "left" },
-                    { "element" : "#siteToolbarRight", "edge" : "left" }
+                    { "element" : "#siteTaskbar", "edge" : "top" }
                 ]
 
             }
@@ -365,9 +334,7 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" },
-                    { "element" : "#siteComments", "edge" : "left" },
-                    { "element" : "#siteToolbarRight", "edge" : "left" }
+                    { "element" : "#siteTaskbar", "edge" : "top" }
                 ]
 
             }
@@ -415,12 +382,11 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 "mode" : 1,
                 "snapTo" : [
                     {"element" : "body","edge" : "top" },
-                    {"element" : "body","edge" : "left" }
+                    {"element" : "#siteToolbarRight","edge" : "left" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" },
-                    { "element" : "#siteToolbarRight", "edge" : "left" }
+                    { "element" : "#siteTaskbar", "edge" : "top" }
                 ]
 
             }
@@ -430,12 +396,11 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 "mode" : 1,
                 "snapTo" : [
                     {"element" : "#siteToolbarTop","edge" : "bottom" },
-                    {"element" : "body","edge" : "left" }
+                    {"element" : "#siteToolbarRight","edge" : "left" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" },
-                    { "element" : "#siteToolbarRight", "edge" : "left" }
+                    { "element" : "#siteTaskbar", "edge" : "top" }
                 ]
 
             }
@@ -466,190 +431,6 @@ na.defaultDesktopDefinitionCode = na.d3c = {
             }
         },
         r_tte_2 = {
-            "#siteToolbarThemeEditor" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "#siteToolbarTop","edge" : "bottom" },
-                    {"element" : "body","edge" : "right" }
-                ],
-                "growTo" : "maxY",
-                "growToLimits" : [
-                        { "element" : "#siteTaskbar", "edge" : "top" },
-                ]
-            }
-        },
-        r_tc_1 = {
-            "#siteContent" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "body","edge" : "top" },
-                    {"element" : "body","edge" : "left" },
-                    {"element" : "#siteToolbarThemeEditor","edge" : "right" }
-                ],
-                "growTo" : "max",
-                "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" }
-                ]
-
-            }
-        },
-        r_tc_2 = {
-            "#siteContent" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "body","edge" : "left" },
-                    {"element" : "#siteToolbarTop","edge" : "bottom" },
-                    {"element" : "#siteToolbarThemeEditor","edge" : "right" }
-                ],
-                "growTo" : "max",
-                "growToLimits" : [
-                    { "element" : "#siteTaskbar", "edge" : "top" }
-                ]
-
-            }
-        };
-        var r = {};
-
-        if (na.d.s.visibleDivs.includes('#siteToolbarTop'))
-            r = $.extend(r, r_tte_2, r_tc_2);
-        else
-            r = $.extend(r, r_tte_1, r_tc_1);
-
-        return r;
-    },
-
-    dv_tte_tr : function () {
-        var
-        r_tl_1 = {
-            "#siteToolbarThemeEditor" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "body","edge" : "top" },
-                    {"element" : "body","edge" : "left" }
-                ],
-                "growTo" : "maxY",
-                "growToLimits" : [
-                        { "element" : "#siteTaskbar", "edge" : "top" },
-                ]
-            }
-        },
-        r_tl_2 = {
-            "#siteToolbarThemeEditor" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "#siteToolbarTop","edge" : "bottom" },
-                    {"element" : "body","edge" : "left" }
-                ],
-                "growTo" : "maxY",
-                "growToLimits" : [
-                        { "element" : "#siteTaskbar", "edge" : "top" },
-                ]
-            }
-        },
-        r_tr_1 = {
-            "#siteToolbarRight" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "body","edge" : "top" },
-                    {"element" : "body","edge" : "right" }
-                ],
-                "growTo" : "maxY",
-                "growToLimits" : [
-                        { "element" : "#siteTaskbar", "edge" : "top" },
-                ]
-            }
-        },
-        r_tr_2 = {
-            "#siteToolbarRight" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "#siteToolbarTop","edge" : "bottom" },
-                    {"element" : "body","edge" : "right" }
-                ],
-                "growTo" : "maxY",
-                "growToLimits" : [
-                        { "element" : "#siteTaskbar", "edge" : "top" },
-                ]
-            }
-        },
-        r_tc_1 = {
-            "#siteContent" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "body","edge" : "top" },
-                    {"element" : "#siteToolbarThemeEditor","edge" : "right" }
-                ],
-                "growTo" : "max",
-                "growToLimits" : [
-                    { "element" : "#siteToolbarRight", "edge" : "left" },
-                    { "element" : "#siteTaskbar", "edge" : "top" }
-                ]
-
-            }
-        },
-        r_tc_2 = {
-            "#siteContent" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "#siteToolbarTop","edge" : "bottom" },
-                    {"element" : "#siteToolbarThemeEditor","edge" : "right" }
-                ],
-                "growTo" : "max",
-                "growToLimits" : [
-                    { "element" : "#siteToolbarRight", "edge" : "left" },
-                    { "element" : "#siteTaskbar", "edge" : "top" }
-                ]
-
-            }
-        };
-        var r = {};
-
-        if (na.d.s.visibleDivs.includes('#siteToolbarTop'))
-            r = $.extend(r, r_tl_2, r_tr_2, r_tc_2);
-        else
-            r = $.extend(r, r_tl_1, r_tr_1, r_tc_1);
-
-        return r;
-    },
-
-    dv_tl_tte : function () {
-        var
-        r_tte_1 = {
-            "#siteToolbarLeft" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "body","edge" : "top" },
-                    {"element" : "body","edge" : "left" }
-                ],
-                "growTo" : "maxY",
-                "growToLimits" : [
-                        { "element" : "#siteTaskbar", "edge" : "top" },
-                ]
-            },
-            "#siteToolbarThemeEditor" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "body","edge" : "top" },
-                    {"element" : "#siteToolbarLeft","edge" : "left" }
-                ],
-                "growTo" : "maxY",
-                "growToLimits" : [
-                        { "element" : "#siteTaskbar", "edge" : "top" },
-                ]
-            }
-        },
-        r_tte_2 = {
-            "#siteToolbarLeft" : {
-                "mode" : 1,
-                "snapTo" : [
-                    {"element" : "body","edge" : "top" },
-                    {"element" : "body","edge" : "left" }
-                ],
-                "growTo" : "maxY",
-                "growToLimits" : [
-                        { "element" : "#siteTaskbar", "edge" : "top" },
-                ]
-            },
             "#siteToolbarThemeEditor" : {
                 "mode" : 1,
                 "snapTo" : [
