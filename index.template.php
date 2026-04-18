@@ -252,7 +252,7 @@ Chart.register(
 
             'btnSettings', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
             '',
-            'na.site.settings.heldUp[\'#siteSettingsMenu\'] = true; $(\'#siteSettingsMenu\').removeClass(\'hidden\').addClass(\'shown\')',
+            'na.site.settings.heldUp[\'#siteSettingsMenu\'] = true; $(\'#siteSettingsMenu\').removeClass(\'hidden\').addClass(\'shown\').css({opacity:\'inherit\'})',
             '',//'$(\'#siteSettingsMenu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#siteSettingsMenu\'});',
             '',
 
@@ -365,7 +365,7 @@ Chart.register(
     </div>
 
     <div id="siteMenu" class="vividMenu vertical" controlledBy="na.desktop" tabindex="5" theme="{$theme}" avoid='{$siteMenu_avoid}'>
-        <div id="siteMenu_vbChecker" class="vividButton vividButton_text vividMenu_item" theme="'+t.t+'" style="opacity:0.0001;position:absolute;">abc XYZ</div>
+        <div id="siteMenu_vbChecker" class="vividButton vividButton_text vividMenu_item" style="opacity:0.0001;position:absolute;">abc XYZ</div>
         <?php mainmenu_includeAllResolutionsAndSegments(); ?>
         <ul class="vividMenu_mainUL" style="display:none;"></ul>
     </div>

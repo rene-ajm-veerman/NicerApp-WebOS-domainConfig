@@ -311,17 +311,17 @@ transition: all var(--mainDelay) linear;
 padding : 10px;
 }
 #siteSettingsMenu.hidden {
-bottom : 100px;
-left : 100px;
+bottom : 120px;
+left : -240px;
 width : fit-content;
-height : 30px;
+height : fit-content;
 border-radius : 10px;
 box-shadow : none;
-opacity : 0.001;
 overflow : hidden;
+opacity : 0.0001;
 }
 #siteSettingsMenu.shown {
-bottom : 110px;
+bottom : 120px;
 left : 100px;
 width : fit-content;
 height : fit-content;
