@@ -2,6 +2,39 @@
   --mainDelay : 0.25s;
 }
 
+
+
+.naFrontpage_headerText {
+  margin:40px;
+  max-width:1000px;
+  padding:8px;
+  border-radius:15px;
+  box-shadow:inset 0px 0px 3px 5px orange, 0px 0px 8px 4px rgba(0,0,0,0.631), 8px 8px 10px rgba(0,0,0,1);
+  line-height:1.5em;
+}
+.naFrontpage_headerText p {
+  padding:8px;
+  border-radius:5px;
+  margin-block-start:0;
+  margin-block-end:0;
+  margin-inline-start:0;
+  margin-inline-end:0;
+  text-shadow:0px 0px 3px rgba(255,255,255,1), 2px 2px 4px rgba(0,0,0,0.8)
+}
+.naFrontpage_headerText_intro {
+  background:rgba(0,0,250,0.3);
+}
+.naFrontpage_headerText_recentAchievement {
+  background:rgba(0,255,0,0.3);
+}
+.naFrontpage_headerText_maintenance {
+  background:rgba(255,0,0,0.3);
+}
+
+.naFrontpage_headerText_maintenance p, .naFrontpage_headerText_recentAchievemnt p {
+  color:yellow;
+}
+
 .naComment_header_div { display:grid;justify-items:center; grid-template-columns: repeat(2, 1fr);}
 .naComment_header_div div { align-self: center; }
 
@@ -608,11 +641,13 @@ z-index : 30000;
   left: 0;
   width: 100%;
   height: 100%;
+  /*
   background-image: -o-linear-gradient(bottom, rgba(0,0,0,0.4) 25%, rgba(40,255,40,0.8) 81%);
   background-image: -moz-linear-gradient(bottom, rgba(0,0,0,0.4) 25%, rgba(40,255,40,0.8) 81%);
   background-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0.4) 25%, rgba(40,255,40,0.8) 81%);
   background-image: -ms-linear-gradient(bottom, rgba(0,0,0,0.4) 25%, rgba(40,255,40,0.8) 81%);
   background-image: linear-gradient(bottom, rgba(0,0,0,0.4) 25%, rgba(40,255,40,0.8) 81%);
+  */
   border-radius : 12px;
   z-index: -1;
   transition: opacity 0.5s linear;
@@ -620,11 +655,13 @@ z-index : 30000;
 }
 .vividButtonSelected:hover:before, .vividButton.selected:hover:before {
   opacity: 1;
+  /*
   background-image: -o-linear-gradient(bottom, rgba(0,100,0,0.4) 25%, rgba(40,255,40,0.8) 81%);
   background-image: -moz-linear-gradient(bottom, rgba(0,100,0,0.4)  25%, rgba(40,255,40,0.8) 81%);
   background-image: -webkit-linear-gradient(bottom, rgba(0,100,0,0.4) 25%, rgba(40,255,40,0.8) 81%);
   background-image: -ms-linear-gradient(bottom, rgba(0,100,0,0.4) 25%, rgba(40,255,40,0.8) 81%);
   background-image: linear-gradient(bottom, rgba(0,100,0,0.4) 25%, rgba(40,255,40,0.8) 81%);
+  */
 }
 
 
@@ -1249,6 +1286,11 @@ left : -400px;
   background: transparent;
   pointer-events: auto;         /* catches mouse events */
   z-index: 2;
+}
+
+.vakata-context, .vakata-context ul {
+  z-index : 800000;
+  background : rgba(0,0,50,0.555);
 }
 
 /* interesting stuff straight from the MDN website :

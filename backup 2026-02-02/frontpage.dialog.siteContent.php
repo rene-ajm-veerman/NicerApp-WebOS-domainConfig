@@ -2,8 +2,8 @@
     require_once(dirname(__FILE__).'/../NicerAppWebOS/boot.php');
     global $naWebOS;
     global $naURLs;
-    //$src = $naWebOS->basePath.'/../../domains/'.$naWebOS->domainFolder.'/domainConfig/pageHeader.php'; echo $src; var_dump(file_exists($src)); exit();
-    require_once ($naWebOS->basePath.'/../domains/'.$naWebOS->domainFolder.'/domainConfig/pageHeader.php');
+    //$src = $naWebOS->codePath.'/../../domains/'.$naWebOS->domainFolder.'/domainConfig/pageHeader.php'; echo $src; var_dump(file_exists($src)); exit();
+    require_once ($naWebOS->codePath.'/../domains/'.$naWebOS->domainFolder.'/domainConfig/pageHeader.php');
 ?>
     <script type="text/javascript">
         //delete na.site.settings.current.app;

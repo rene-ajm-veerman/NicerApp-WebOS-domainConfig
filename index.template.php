@@ -12,13 +12,14 @@ global $naWebOS;
     <link rel="mask-icon" href="/NicerAppWebOS/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="/NicerAppWebOS/favicon/favicon.ico">
     <?php echo '<link type="text/css" rel="StyleSheet" href="/NicerAppWebOS/3rd-party/jsTree-3.3.15/dist/themes/default/style.css?c='.date('Ymd_His', filemtime(dirname(__FILE__).'/../NicerAppWebOS/3rd-party/jsTree-3.3.15/dist/themes/default/style.css')).'">'.PHP_EOL; ?>
+    <meta name="generator" content="<?=$naWebOS->about->whatsThis?>"/>
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="/NicerAppWebOS/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <meta property="og:image" content="/NicerAppWebOS/screenshot_small.png">
     <meta property="og:description" content="{$description}">
     <meta name="description" content="{$description}">
-    <meta name="viewport" content="width=device-width, initial-scale=0.3, maximum-scale=2.5, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.5, user-scalable=yes">
     <title>{$title}</title>
     <!-- see fonts.google.com (thanks, Google!) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -203,12 +204,12 @@ Chart.register(
             null
         );
         global $naLAN;
-        if ($naLAN) echo $naWebOS->html_vividButton (
+        echo $naWebOS->html_vividButton (
             5, 'margin:0;position:relative;float:left;',
 
             'btnNewRandomSiteBackground', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
             '',
-            'na.backgrounds.next(\'#siteBackground\');',
+            'na.backgrounds.next(\'#siteBackground\', \'Landscape\');',
             '',//'$(\'#siteSettingsMenu\')[0].vividUserInterface_2D_dialog.hide({evt:event,checkHeldUp:\'#siteSettingsMenu\'});',
             '',
 
@@ -225,7 +226,7 @@ Chart.register(
             null,
             null
         );
-        if ($naLAN) echo $naWebOS->html_vividButton (
+        echo $naWebOS->html_vividButton (
             6, 'margin:0;position:relative;float:left;',
 
             'btnSiteBackground', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',

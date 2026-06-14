@@ -275,7 +275,7 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 "mode" : 1,
                 "snapTo" : [
                     {"element" : "body","edge" : "top" },
-                    {"element" : "#siteToolbarThemeEditor","edge" : "right" }
+                    {"element" : "#siteToolbarLeft","edge" : "right" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
@@ -291,7 +291,7 @@ na.defaultDesktopDefinitionCode = na.d3c = {
                 "mode" : 1,
                 "snapTo" : [
                     {"element" : "#siteToolbarTop","edge" : "bottom" },
-                    {"element" : "#siteToolbarThemeEditor","edge" : "right" }
+                    {"element" : "#siteToolbarLeft","edge" : "right" }
                 ],
                 "growTo" : "max",
                 "growToLimits" : [
