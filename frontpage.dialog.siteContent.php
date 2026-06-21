@@ -2,8 +2,9 @@
     require_once(dirname(__FILE__).'/../NicerAppWebOS/boot.php');
     global $naWebOS;
     global $naURLs;
+    require_once(dirname(__FILE__).'/../NicerAppWebOS/businessLogic/vividUserInterface/v5.y.z/photoAlbum/4.0.0/functions.php');
     //$src = $naWebOS->codePath.'/../../domains/'.$naWebOS->domainFolder.'/domainConfig/pageHeader.php'; echo $src; var_dump(file_exists($src)); exit();
-    require_once ($naWebOS->codePath.'/../domains/'.$naWebOS->domainFolder.'/domainConfig/pageHeader.php');
+    require_once ($naWebOS->domainPath.'/domainConfig/pageHeader.php');
 ?>
     <script type="text/javascript">
         //delete na.site.settings.current.app;
@@ -21,7 +22,7 @@
         });
     </script>
 
-    <div class="naFrontpage_headerText naFrontpage_headerText_intro">
+    <div class="naFrontpage_headerText naFrontpage_headerText_intro" style="max-width:1438px;width:fit-content;">
         <p>
         Discover an open-source CMS and WebOS that lets you create stunning apps over dynamic backgrounds.<br/>
         Perfect for all ages to learn, play, and innovate with!
@@ -40,16 +41,24 @@
 
 
 
+    <!--
     <div class="naFrontpage_headerText naFrontpage_headerText_recentAchievement">
         <p>
         As of 2026-June-14th, 03:38CEST, i have <a href="https://grok.com/share/c2hhcmQtMw_86e55166-637d-449b-8e27-8a7fb1a94e03" target="_new" class="nomod noPushState">quit all forms of smoking</a>, which will (hopefully) soon free up funds to advertise these websites of mine, resulting in a real chance to stress test the architecture under high workloads, and which will free me from my protective custody contract as well.
         </p>
     </div>
+    -->
+    <div class="naFrontpage_headerText naFrontpage_headerText_maintenance" style="max-width:1438px;width:fit-content;">
+    <p>
+    2026-06-20(Saturday) to 2026-06-21 : i <a href="https://x.com/ReneAjmVeerman/status/2068268475638743296" class="nomod noPushState" target="_new">Requested permission</a> to start on <a href="https://github.com/rene-ajm-veerman/NicerApp-WebOS-MIT-5.10.z/tree/main/NicerAppWebOS/businessLogic/concept%20-%20regionalCloud" class="nomod noPushState" target="_new">Regional Cloud</a>.<br/>
+    </p>
+    </div>
 
-    <div class="naFrontpage_headerText naFrontpage_headerText_maintenance">
+
+    <div class="naFrontpage_headerText naFrontpage_headerText_maintenance" style="max-width:1438px;width:fit-content;">
     <p>
     2026-June-14th, 01:24CEST:<br/>
-    These webservers are in the process of undergoing a major version upgrade, of -primarily- the database business logic.<br/>
+    These webservers are in the process of undergoing a major version upgrade, of -primarily- the database business logic code.<br/>
     Services may go down temporarily on new.nicer.app for seemingly unexplainable reasons over the next few weeks.
     </p>
     </div>
@@ -66,7 +75,7 @@
         <h2>Music</h2>
         <p class="backdropped" style="padding:10px">The music pages are viewable, downloadable, and hearable, but currently still only in their most basic form.<br/>Additional features are being worked on, including search and playlists.</p>
 
-        <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="/view/eyJcL05pY2VyQXBwV2ViT1NcL2FwcHNcL05pY2VyQXBwV2ViT1NcL2FwcGxpY2F0aW9uc1wvMkRcL211c2ljUGxheWVyLmZhbmN5LmxhdGVzdC4yRCI6eyJzZXQiOiJESiBGaXJlc25ha2UiLCJzZW9WYWx1ZSI6Im11c2ljLURKLXQxLUZpcmVzbmFrZSIsIndlYlJlbFBhdGgiOiJcL1wvXC9ESiBtaXhlc1wvREogRmlyZXNuYWtlXC9yZWxlYXNlZFwvIn19?idxStart=1400&pw=alwaysXMASzzz" class="contentSectionTitle3_a">2D-Fancy-UI : DJ FireSnake (aka Rene AJM Veerman or x.com @Gavan1977)</a>.</h3>
+        <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="/view/eyJcL05pY2VyQXBwV2ViT1NcL2FwcHNcL05pY2VyQXBwV2ViT1NcL2FwcGxpY2F0aW9uc1wvMkRcL211c2ljUGxheWVyLmZhbmN5LmxhdGVzdC4yRCI6eyJzZXQiOiJESiBGaXJlc25ha2UiLCJzZW9WYWx1ZSI6Im11c2ljLURKLXQxLUZpcmVzbmFrZSIsIndlYlJlbFBhdGgiOiJcL1wvXC9ESiBtaXhlc1wvREogRmlyZXNuYWtlXC9yZWxlYXNlZFwvIn19?idxStart=1400&pw=alwaysXMASzzz" class="contentSectionTitle3_a">2D-Fancy-UI : DJ FireSnake (aka Rene AJM Veerman or x.com @ReneAjmVeerman)</a>.</h3>
         <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="https://nicer.app/music-2D-beatPulse?pw=alwaysXMASzzz&idxStart=1400" class="contentSectionTitle3_a">2D : index</a>.</h3>
         <h3 class="contentSectionTitle3" style="margin-left:50px"><a href="/3D" class="contentSectionTitle3_a">3D</a> (under construction).</h3>
     </div>
@@ -83,8 +92,6 @@
         <li><a href="<?php echo $naURLs['newsHeadlines_arabic'];?>" class="contentSectionTitle3_a">Arabic Business News (in English)</a></li>
     </ul>
     
-    <h3 class="contentSectionTitle3"><a href="<?php echo $naURLs['tarot'];?>" class="contentSectionTitle3_a">Tarot cardgame</a></h3>
-
     <h3 class="contentSectionTitle3"><a href="https://zoned.at" target="zonedAt" class="contentSectionTitle3_a">URL redirection (on https://zoned.at)</a></h3>
 
     <h3 class="contentSectionTitle3"><a href="/wiki/frontpage" class="contentSectionTitle3_a">Wikipedia.org view</a></h3>
@@ -97,3 +104,7 @@
     <?php
     }
     ?>
+
+    <h3 class="contentSectionTitle3"><a href="<?php echo $naURLs['tarot'];?>" class="contentSectionTitle3_a">Tarot cardgame</a></h3>
+    <?=naTarotDecksAlbum();?>
+
