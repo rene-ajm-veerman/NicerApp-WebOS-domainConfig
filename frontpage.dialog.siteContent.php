@@ -34,25 +34,12 @@
         and available as <a href="https://nicer.app/downloads" class="nomod noPushState" target="naDownload">full package here</a>, <br/>
         and a live copy of the latest -not always stable- <a href="https://new.nicer.app" class="nomod noPushState" target="newNA">development version here</a>.
         </p>
+        <p><a href="https://said.by/view/eyJcL05pY2VyQXBwV2ViT1NcL2FwcHNcL05pY2VyQXBwV2ViT1NcL2NvbnRlbnQtbWFuYWdlbWVudC1zeXN0ZW1zXC9OaWNlckFwcFdlYk9TIjp7ImNtc1ZpZXdNZWRpYSI6eyJjb2RlUGF0aCI6IlwvdmFyXC93d3dcL25pY2VyLmFwcC01LjEwLnpcL2RvbWFpbnNcL3NhaWQuYnlcL3NpdGVEYXRhXC9zYWlkLmJ5XC9Vc2Vyc1wvbXJQYXRpZW50XC9NZWRpYSBBbGJ1bXNcL05ld1wvU2NyZWVuc2hvdHMiLCJmaWxlbmFtZSI6IlNjcmVlbnNob3RfMjAyNjA2MTJfMjAxMjQwLnBuZyJ9fX0" class="nomod noPushState" target="naScreenshots-20260623-1016CET-AMS">Screenshot</a> <a class="nomod noPushState" target="naDiary-20260623-1008CET-AMS" href="https://nicer.app/view/eyJhaWQiOjAsImZkcyI6NTcxMjAwLCJycCI6IlwvMjAyNiBCZXN0XC8ifQ?idxStart=0&pw=alwaysXMASzzz">collection</a>, uploaded by me the owner of nicer.app, just now : <a href="https://said.by/mrPatient/about/SaidBy" class="nomod noPushState" target="naScreenshots">https://said.by/mrPatient/about/SaidBy</a></p>
         <p style="padding:8px;border-radius:5px;margin-block-start:0;margin-block-end:0;margin-inline-start:0;margin-inline-end:0;text-shadow:0px 0px 3px rgba(255,255,255,1), 2px 2px 4px rgba(0,0,0,0.8)">
         Bug-reports may be sent to <a href="mailto:rene.veerman.netherlands@gmail.com">rene.veerman.netherlands@gmail.com</a>, or to <a class="nomod noPushState" target="ghi" href="https://github.com/rene-ajm-veerman/NicerApp-WebOS-MIT-5.10.z/issues">https://github.com/rene-ajm-veerman/NicerApp-WebOS-MIT-5.10.z/issues</a>.
         </p>
     </div>
 
-
-
-    <!--
-    <div class="naFrontpage_headerText naFrontpage_headerText_recentAchievement">
-        <p>
-        As of 2026-June-14th, 03:38CEST, i have <a href="https://grok.com/share/c2hhcmQtMw_86e55166-637d-449b-8e27-8a7fb1a94e03" target="_new" class="nomod noPushState">quit all forms of smoking</a>, which will (hopefully) soon free up funds to advertise these websites of mine, resulting in a real chance to stress test the architecture under high workloads, and which will free me from my protective custody contract as well.
-        </p>
-    </div>
-    -->
-    <div class="naFrontpage_headerText naFrontpage_headerText_maintenance" style="max-width:1438px;width:fit-content;">
-    <p>
-    2026-06-20(Saturday) to 2026-06-21 : i <a href="https://x.com/ReneAjmVeerman/status/2068268475638743296" class="nomod noPushState" target="_new">Requested permission</a> to start on <a href="https://github.com/rene-ajm-veerman/NicerApp-WebOS-MIT-5.10.z/tree/main/NicerAppWebOS/businessLogic/concept%20-%20regionalCloud" class="nomod noPushState" target="_new">Regional Cloud</a>.<br/>
-    </p>
-    </div>
 
 
     <div class="naFrontpage_headerText naFrontpage_headerText_maintenance" style="max-width:1438px;width:fit-content;">
@@ -92,9 +79,13 @@
         <li><a href="<?php echo $naURLs['newsHeadlines_arabic'];?>" class="contentSectionTitle3_a">Arabic Business News (in English)</a></li>
     </ul>
     
-    <h3 class="contentSectionTitle3"><a href="https://zoned.at" target="zonedAt" class="contentSectionTitle3_a">URL redirection (on https://zoned.at)</a></h3>
+    <h3 class="contentSectionTitle3">Encyclopedias</h3>
+    <ul>
+        <li><a href="/wiki/frontpage" class="contentSectionTitle3_a">Wikipedia.org</a></li>
+        <li><a href="/grokipedia" class="contentSectionTitle3_a">Grokipedia</a></li>
+    </ul>
 
-    <h3 class="contentSectionTitle3"><a href="/wiki/frontpage" class="contentSectionTitle3_a">Wikipedia.org view</a></h3>
+    <h3 class="contentSectionTitle3"><a href="https://zoned.at" target="zonedAt" class="contentSectionTitle3_a">URL redirection (on https://zoned.at)</a></h3>
 
     <?php
     global $naLAN;

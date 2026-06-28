@@ -362,10 +362,32 @@ Chart.register(
             'grouped mouseout',
             null
         );
+        echo $naWebOS->html_vividButton (
+            4, 'position:relative;',
+
+            'btnSearch', 'vividButton_icon_50x50 btnCloseWindow grouped', '_50x50', 'grouped',
+            '',
+            'js:onclick',
+            '',
+            '',
+
+            7, 'Search',
+
+            'btnCssVividButton_outerBorder.png',
+            'btnCssVividButton.png',
+            null,//'btnCssVividButton.grey2a.png',
+            'na.question-mark.svg.png',
+
+            '',
+
+            'Toggle help',
+            'grouped mouseout',
+            null
+        );
         ?>
     </div>
 
-    <div id="siteMenu" class="vividMenu vertical" controlledBy="na.desktop" tabindex="5" theme="{$theme}" avoid='{$siteMenu_avoid}'>
+    <div id="siteMenu" class="vividMenu vertical" controlledBy="na.desktop" tabindex="5" theme="{$theme}" avoid='{$siteMenu_avoid}' style="bottom:300px;display:flex;">
         <div id="siteMenu_vbChecker" class="vividButton vividButton_text vividMenu_item" style="opacity:0.0001;position:absolute;">abc XYZ</div>
         <?php mainmenu_includeAllResolutionsAndSegments(); ?>
         <ul class="vividMenu_mainUL" style="display:none;"></ul>
@@ -1368,110 +1390,110 @@ echo $naWebOS->html_vividButton (
                 </select>
                 -->
                 <div id="textFontFamily_containerDiv" style="position:relative">
-                <div id="textFontFamily" class="vividMenu" type="vertical" tabindex="5" theme="{$theme}" style="position:relative;z-index:920000;">
-                    <ul class="vividMenu_mainUL" style="display:none;" itemsLevel1="1" menuStructure="vertical">
-                        <li><a id="textFontFamily_label" href="javascript:na.te.textSettings_getFont(event)">Select Font</a>
+                <div id="textFontFamily" class="vividMenu vertical" type="vertical" tabindex="5" theme="{$theme}" style="position:relative;z-index:920000;">
+                    <ul class="vividMenu_mainUL" itemsLevel1="1" menuStructure="vertical">
+                        <li class="submenu has-submenu"><a id="textFontFamily_label" href="javascript:na.te.textSettings_getFont(event)">Select Font</a>
                             <ul>
-                                <li><a href="#">Bold</a>
+                                <li class="submenu has-submenu"><a href="#">Bold</a>
                                     <ul>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Aclonica')" style="font-family:Aclonica">Aclonica</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Archivo Black')" style="font-family:Archivo Black">Archivo Black</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Baloo')" style="font-family:Baloo">Baloo</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Bebas Neue')" style="font-family:Bebas Neue">Bebas Neue</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Chewy')" style="font-family:Chewy">Chewy</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Galada')" style="font-family:Galada">Galada</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Krona One')" style="font-family:Krona One">Krona One</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Modak')" style="font-family:Modak">Modak</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Odibee Sans')" style="font-family:Odibee Sans">Odibee Sans</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Sigmar One')" style="font-family:Sigmar One">Sigmar One</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Aclonica')" style="font-family:Aclonica">Aclonica</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Archivo Black')" style="font-family:Archivo Black">Archivo Black</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Baloo')" style="font-family:Baloo">Baloo</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Bebas Neue')" style="font-family:Bebas Neue">Bebas Neue</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Chewy')" style="font-family:Chewy">Chewy</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Galada')" style="font-family:Galada">Galada</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Krona One')" style="font-family:Krona One">Krona One</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Modak')" style="font-family:Modak">Modak</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Odibee Sans')" style="font-family:Odibee Sans">Odibee Sans</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Sigmar One')" style="font-family:Sigmar One">Sigmar One</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Handwritten</a>
+                                <li class="submenu has-submenu"><a href="#">Handwritten</a>
                                     <ul>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Acme')" style="font-family:Acme">Acme</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Akronim')" style="font-family:Akronim">Akronim</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Alex Brush')" style="font-family:Alex Brush">Alex Brush</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Architects Daughter')" style="font-family:Architects ">Architects Daughter</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Caveat')" style="font-family:Caveat">Caveat</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Cookie')" style="font-family:Cookie">Cookie</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Courgette')" style="font-family:Courgette">Courgette</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Covered By Your Grace')" style="font-family:Covered By Your Grace">Covered By Your Grace</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Dancing Script')" style="font-family:Dancing Script">Dancing Script</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Great Vibes')" style="font-family:Great Vibes">Great Vibes</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Kalam')" style="font-family:Kalam">Kalam</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Kaushan Script')" style="font-family:Kaushan Script">Kaushan Script</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Lacquer')" style="font-family:Lacquer">Lacquer</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Lemonada')" style="font-family:Lemonada">Lemonada</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Marck Script')" style="font-family:Marck Script">Marck Script</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Merienda One')" style="font-family:Merienda One">Merienda One</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Mr Dafoe')" style="font-family:Mr Dafoe">Mr Dafoe</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Nanum Pen Script')" style="font-family:Nanum Pen Script">Nanum Pen Script</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Oleo Script')" style="font-family:Oleo Script">Oleo Script</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Parisienne')" style="font-family:Parisienne">Parisienne</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Permanent Marker')" style="font-family:Permanent Marker">Permanent Marker</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Playball')" style="font-family:Playball">Playball</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Rock Salt')" style="font-family:Rock Salt">Rock Salt</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Sacramento')" style="font-family:Sacramento">Sacramento</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Satisfy')" style="font-family:Satisfy">Satisfy</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Shadows Into Light')" style="font-family:Shadows Into Light">Shadows Into Light</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Shadows Into Light Two')" style="font-family:Shadows Into Light Two">Shadows Into Light Two</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Sriracha')" style="font-family:Sriracha">Sriracha</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Acme')" style="font-family:Acme">Acme</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Akronim')" style="font-family:Akronim">Akronim</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Alex Brush')" style="font-family:Alex Brush">Alex Brush</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Architects Daughter')" style="font-family:Architects ">Architects Daughter</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Caveat')" style="font-family:Caveat">Caveat</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Cookie')" style="font-family:Cookie">Cookie</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Courgette')" style="font-family:Courgette">Courgette</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Covered By Your Grace')" style="font-family:Covered By Your Grace">Covered By Your Grace</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Dancing Script')" style="font-family:Dancing Script">Dancing Script</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Great Vibes')" style="font-family:Great Vibes">Great Vibes</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Kalam')" style="font-family:Kalam">Kalam</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Kaushan Script')" style="font-family:Kaushan Script">Kaushan Script</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Lacquer')" style="font-family:Lacquer">Lacquer</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Lemonada')" style="font-family:Lemonada">Lemonada</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Marck Script')" style="font-family:Marck Script">Marck Script</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Merienda One')" style="font-family:Merienda One">Merienda One</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Mr Dafoe')" style="font-family:Mr Dafoe">Mr Dafoe</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Nanum Pen Script')" style="font-family:Nanum Pen Script">Nanum Pen Script</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Oleo Script')" style="font-family:Oleo Script">Oleo Script</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Parisienne')" style="font-family:Parisienne">Parisienne</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Permanent Marker')" style="font-family:Permanent Marker">Permanent Marker</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Playball')" style="font-family:Playball">Playball</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Rock Salt')" style="font-family:Rock Salt">Rock Salt</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Sacramento')" style="font-family:Sacramento">Sacramento</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Satisfy')" style="font-family:Satisfy">Satisfy</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Shadows Into Light')" style="font-family:Shadows Into Light">Shadows Into Light</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Shadows Into Light Two')" style="font-family:Shadows Into Light Two">Shadows Into Light Two</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Sriracha')" style="font-family:Sriracha">Sriracha</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Office</a>
+                                <li class="submenu has-submenu"><a href="#">Office</a>
                                     <ul>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'ABeeZee')" style="font-family:ABeeZee">ABeeZee</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Actor')" style="font-family:Actor">Actor</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Advent Pro')" style="font-family:Advent Pro">Advent Pro</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Exo')" style="font-family:Exo">Exo</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Exo 2')" style="font-family:Exo 2">Exo 2</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Khula')" style="font-family:Khula">Khula</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'M PLUS 1p')" style="font-family:M PLUS 1p">M PLUS 1p</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Montserrat Alternates')" style="font-family:Montserrat Alternates">Montserrat Alternates</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Orbitron')" style="font-family:Orbitron">Orbitron</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Pathway Gothic One')" style="font-family:Pathway Gothic One">Pathway Gothic One</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Saira Condensed')" style="font-family:Saira Condensed">Saira Condensed</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Saira Extra Condensed')" style="font-family:Saira Extra Condensed">Saira Extra Condensed</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Saira Semi Condensed')" style="font-family:Saira Semi Condensed">Saira Semi Condensed</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Signika Negative')" style="font-family:Signika Negative">Signika Negative</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Slabo 27px')" style="font-family:Slabo 27px">Slabo 27px</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Source Code Pro')" style="font-family:Source Code Pro">Source Code Pro</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Spinnaker')" style="font-family:Spinnaker">Spinnaker</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Unica One')" style="font-family:Unica One">Unica One</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Ubuntu')" style="font-family:Ubuntu">Ubuntu</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'ABeeZee')" style="font-family:ABeeZee">ABeeZee</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Actor')" style="font-family:Actor">Actor</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Advent Pro')" style="font-family:Advent Pro">Advent Pro</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Exo')" style="font-family:Exo">Exo</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Exo 2')" style="font-family:Exo 2">Exo 2</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Khula')" style="font-family:Khula">Khula</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'M PLUS 1p')" style="font-family:M PLUS 1p">M PLUS 1p</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Montserrat Alternates')" style="font-family:Montserrat Alternates">Montserrat Alternates</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Orbitron')" style="font-family:Orbitron">Orbitron</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Pathway Gothic One')" style="font-family:Pathway Gothic One">Pathway Gothic One</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Saira Condensed')" style="font-family:Saira Condensed">Saira Condensed</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Saira Extra Condensed')" style="font-family:Saira Extra Condensed">Saira Extra Condensed</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Saira Semi Condensed')" style="font-family:Saira Semi Condensed">Saira Semi Condensed</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Signika Negative')" style="font-family:Signika Negative">Signika Negative</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Slabo 27px')" style="font-family:Slabo 27px">Slabo 27px</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Source Code Pro')" style="font-family:Source Code Pro">Source Code Pro</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Spinnaker')" style="font-family:Spinnaker">Spinnaker</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Unica One')" style="font-family:Unica One">Unica One</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Ubuntu')" style="font-family:Ubuntu">Ubuntu</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Newspaper</a>
+                                <li class="submenu has-submenu"><a href="#">Newspaper</a>
                                     <ul>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Cormorant')" style="font-family:Cormorant">Cormorant</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'El Messiri')" style="font-family:El Messiri">El Messiri</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Knewave')" style="font-family:Knewave">Knewave</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Lusitana')" style="font-family:Lusitana">Lusitana</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Noto Serif JP')" style="font-family:Noto Serif JP">Noto Serif JP</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Pridi')" style="font-family:Pridi">Pridi</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Quattrocento Sans')" style="font-family:Quattrocento Sans">Quattrocento Sans</a></li>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Spectral')" style="font-family:Spectral">Spectral</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Cormorant')" style="font-family:Cormorant">Cormorant</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'El Messiri')" style="font-family:El Messiri">El Messiri</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Knewave')" style="font-family:Knewave">Knewave</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Lusitana')" style="font-family:Lusitana">Lusitana</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Noto Serif JP')" style="font-family:Noto Serif JP">Noto Serif JP</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Pridi')" style="font-family:Pridi">Pridi</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Quattrocento Sans')" style="font-family:Quattrocento Sans">Quattrocento Sans</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Spectral')" style="font-family:Spectral">Spectral</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="#">Movies</a>
+                                <li class="submenu has-submenu"><a href="#">Movies</a>
                                     <ul>
-                                        <li><a href="javascript:na.te.textSettings_changeFont(event, 'Special Elite')" style="font-family:Special Elite">Special Elite</a></li>
+                                        <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Special Elite')" style="font-family:Special Elite">Special Elite</a></li>
                                     </ul>
                                 </li>
 
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Fjalla One')" style="font-family:Fjalla One">Fjalla One</a></option>
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Gloria Hallelujah')" style="font-family:Gloria Hallelujah">Gloria Hallelujah</a></option>
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Handlee')" style="font-family:Handlee">Handlee</a></option>
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Indie Flower')" style="font-family:Indie Flower">Indie Flower</a></option>
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Lato:300,300i,400,400i')" style="font-family:Lato">Lato:300,300i,400,400i</a></option>
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Montserrat')" style="font-family:Montserrat">Montserrat</a></option>
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Mukta Malar')" style="font-family:Mukta Malar">Mukta Malar</a></option>
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Open Sans')" style="font-family:Open Sans">Open Sans</a></option>
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Pacifico')" style="font-family:Pacifico">Pacifico</a></option>
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'PT Sans')" style="font-family:PT Sans">PT Sans</a></option>
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Raleway')" style="font-family:Raleway">Raleway</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Fjalla One')" style="font-family:Fjalla One">Fjalla One</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Gloria Hallelujah')" style="font-family:Gloria Hallelujah">Gloria Hallelujah</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Handlee')" style="font-family:Handlee">Handlee</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Indie Flower')" style="font-family:Indie Flower">Indie Flower</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Lato:300,300i,400,400i')" style="font-family:Lato">Lato:300,300i,400,400i</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Montserrat')" style="font-family:Montserrat">Montserrat</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Mukta Malar')" style="font-family:Mukta Malar">Mukta Malar</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Open Sans')" style="font-family:Open Sans">Open Sans</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Pacifico')" style="font-family:Pacifico">Pacifico</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'PT Sans')" style="font-family:PT Sans">PT Sans</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Raleway')" style="font-family:Raleway">Raleway</a></option>
 
-                                <li><a href="javascript:na.te.textSettings_changeFont(event, 'Work Sans')" style="font-family:Work Sans">Work Sans</a></option>
+                                <li class="submenu has-submenu"><a href="javascript:na.te.textSettings_changeFont(event, 'Work Sans')" style="font-family:Work Sans">Work Sans</a></option>
                             </ul>
                         </li>
                     </ul>

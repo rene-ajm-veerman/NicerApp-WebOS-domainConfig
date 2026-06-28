@@ -312,6 +312,22 @@
             ]
         ],
 
+        "grokipedia.com" => [
+            'apps-current' => [
+                'NicerApp-WebOS__pageSettings' => [
+                    "misc" => [
+                        'folder' => '/NicerAppWebOS/apps/NicerAppWebOS/applications/2D'
+                    ],
+                    "apps" => [
+                        '3rd-party-site.grokipedia.com' => [
+                            'page' => 'index',
+                            'seoValue' => [ 'grokipedia', 'gp' ]
+                        ]
+                    ]
+                ]
+            ]
+        ],
+
         "tarot" => [
             'apps-current' => [
                 'NicerApp-WebOS__pageSettings' => [

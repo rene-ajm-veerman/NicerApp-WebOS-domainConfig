@@ -2,7 +2,9 @@
   --mainDelay : 0.25s;
 }
 
-
+#siteContent span, #siteContent p {
+  text-shadow:0px 0px 7px black, 0px 0px 2px black, 2px 2px 4px black;
+}
 
 .naFrontpage_headerText {
   margin:40px;
